@@ -31,28 +31,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvWishlistBooks = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvReadBooks = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvOwnedBooks = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbVADOwned = new System.Windows.Forms.RadioButton();
+            this.rbVADRead = new System.Windows.Forms.RadioButton();
+            this.rbVADWishlist = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.btnAddOwned = new System.Windows.Forms.Button();
+            this.btnAddRead = new System.Windows.Forms.Button();
+            this.btnAddWishlist = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWishlistBooks)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReadBooks)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOwnedBooks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +68,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(356, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 38);
+            this.label1.Size = new System.Drawing.Size(332, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Personal Library Manager";
             // 
@@ -75,23 +78,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 277);
             this.panel1.TabIndex = 1;
+            this.panel1.Visible = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView3);
+            this.panel2.Controls.Add(this.dgvWishlistBooks);
             this.panel2.Location = new System.Drawing.Point(543, 327);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 277);
             this.panel2.TabIndex = 2;
+            this.panel2.Visible = false;
+            // 
+            // dgvWishlistBooks
+            // 
+            this.dgvWishlistBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWishlistBooks.Location = new System.Drawing.Point(15, 94);
+            this.dgvWishlistBooks.Name = "dgvWishlistBooks";
+            this.dgvWishlistBooks.RowHeadersWidth = 51;
+            this.dgvWishlistBooks.RowTemplate.Height = 24;
+            this.dgvWishlistBooks.Size = new System.Drawing.Size(188, 116);
+            this.dgvWishlistBooks.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Controls.Add(this.dgvReadBooks);
             this.panel3.Location = new System.Drawing.Point(289, 327);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(215, 277);
             this.panel3.TabIndex = 2;
+            this.panel3.Visible = false;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // dgvReadBooks
+            // 
+            this.dgvReadBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReadBooks.Location = new System.Drawing.Point(14, 94);
+            this.dgvReadBooks.Name = "dgvReadBooks";
+            this.dgvReadBooks.RowHeadersWidth = 51;
+            this.dgvReadBooks.RowTemplate.Height = 24;
+            this.dgvReadBooks.Size = new System.Drawing.Size(188, 116);
+            this.dgvReadBooks.TabIndex = 5;
             // 
             // panel4
             // 
@@ -100,36 +126,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 277);
             this.panel4.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 421);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(188, 116);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(14, 94);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(188, 116);
-            this.dataGridView2.TabIndex = 5;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(15, 94);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(188, 116);
-            this.dataGridView3.TabIndex = 1;
             // 
             // dataGridView4
             // 
@@ -140,6 +136,16 @@
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(188, 116);
             this.dataGridView4.TabIndex = 1;
+            // 
+            // dgvOwnedBooks
+            // 
+            this.dgvOwnedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOwnedBooks.Location = new System.Drawing.Point(44, 421);
+            this.dgvOwnedBooks.Name = "dgvOwnedBooks";
+            this.dgvOwnedBooks.RowHeadersWidth = 51;
+            this.dgvOwnedBooks.RowTemplate.Height = 24;
+            this.dgvOwnedBooks.Size = new System.Drawing.Size(188, 116);
+            this.dgvOwnedBooks.TabIndex = 0;
             // 
             // label2
             // 
@@ -153,53 +159,53 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Please select an option: ";
             // 
-            // radioButton1
+            // rbVADOwned
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Poor Richard", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton1.Location = new System.Drawing.Point(6, 51);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(229, 20);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "View, Add, Delete Current Owned Books";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbVADOwned.AutoSize = true;
+            this.rbVADOwned.Font = new System.Drawing.Font("Poor Richard", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbVADOwned.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbVADOwned.Location = new System.Drawing.Point(6, 51);
+            this.rbVADOwned.Name = "rbVADOwned";
+            this.rbVADOwned.Size = new System.Drawing.Size(229, 20);
+            this.rbVADOwned.TabIndex = 5;
+            this.rbVADOwned.TabStop = true;
+            this.rbVADOwned.Text = "View, Add, Delete Current Owned Books";
+            this.rbVADOwned.UseVisualStyleBackColor = true;
+            this.rbVADOwned.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // rbVADRead
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Poor Richard", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton2.Location = new System.Drawing.Point(6, 93);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(211, 20);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "View Add, Delete Books You\'ve Read";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbVADRead.AutoSize = true;
+            this.rbVADRead.Font = new System.Drawing.Font("Poor Richard", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbVADRead.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbVADRead.Location = new System.Drawing.Point(6, 93);
+            this.rbVADRead.Name = "rbVADRead";
+            this.rbVADRead.Size = new System.Drawing.Size(211, 20);
+            this.rbVADRead.TabIndex = 6;
+            this.rbVADRead.TabStop = true;
+            this.rbVADRead.Text = "View Add, Delete Books You\'ve Read";
+            this.rbVADRead.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbVADWishlist
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Poor Richard", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton3.Location = new System.Drawing.Point(6, 141);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(187, 20);
-            this.radioButton3.TabIndex = 7;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "ViewAdd, Delete  Wishlist Items";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbVADWishlist.AutoSize = true;
+            this.rbVADWishlist.Font = new System.Drawing.Font("Poor Richard", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbVADWishlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbVADWishlist.Location = new System.Drawing.Point(6, 141);
+            this.rbVADWishlist.Name = "rbVADWishlist";
+            this.rbVADWishlist.Size = new System.Drawing.Size(187, 20);
+            this.rbVADWishlist.TabIndex = 7;
+            this.rbVADWishlist.TabStop = true;
+            this.rbVADWishlist.Text = "ViewAdd, Delete  Wishlist Items";
+            this.rbVADWishlist.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.rbVADOwned);
+            this.groupBox1.Controls.Add(this.rbVADRead);
+            this.groupBox1.Controls.Add(this.rbVADWishlist);
             this.groupBox1.Location = new System.Drawing.Point(82, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(263, 191);
@@ -256,15 +262,45 @@
             this.radioButton5.Text = "Switch Books from WishList to Owned List ";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
+            // btnAddOwned
+            // 
+            this.btnAddOwned.Location = new System.Drawing.Point(794, 479);
+            this.btnAddOwned.Name = "btnAddOwned";
+            this.btnAddOwned.Size = new System.Drawing.Size(136, 49);
+            this.btnAddOwned.TabIndex = 12;
+            this.btnAddOwned.Text = "Add to Owned Books";
+            this.btnAddOwned.UseVisualStyleBackColor = true;
+            // 
+            // btnAddRead
+            // 
+            this.btnAddRead.Location = new System.Drawing.Point(955, 479);
+            this.btnAddRead.Name = "btnAddRead";
+            this.btnAddRead.Size = new System.Drawing.Size(136, 49);
+            this.btnAddRead.TabIndex = 13;
+            this.btnAddRead.Text = "Add to Read Books";
+            this.btnAddRead.UseVisualStyleBackColor = true;
+            // 
+            // btnAddWishlist
+            // 
+            this.btnAddWishlist.Location = new System.Drawing.Point(1115, 479);
+            this.btnAddWishlist.Name = "btnAddWishlist";
+            this.btnAddWishlist.Size = new System.Drawing.Size(136, 49);
+            this.btnAddWishlist.TabIndex = 14;
+            this.btnAddWishlist.Text = "Add to WishList Books";
+            this.btnAddWishlist.UseVisualStyleBackColor = true;
+            // 
             // LibraryApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PersonalLibraryApp.Properties.Resources.Books_1085770318;
             this.ClientSize = new System.Drawing.Size(1263, 605);
+            this.Controls.Add(this.btnAddWishlist);
+            this.Controls.Add(this.btnAddRead);
+            this.Controls.Add(this.btnAddOwned);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOwnedBooks);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -273,12 +309,12 @@
             this.Name = "LibraryApp";
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWishlistBooks)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReadBooks)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOwnedBooks)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -295,19 +331,22 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvOwnedBooks;
+        private System.Windows.Forms.DataGridView dgvWishlistBooks;
+        private System.Windows.Forms.DataGridView dgvReadBooks;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbVADOwned;
+        private System.Windows.Forms.RadioButton rbVADRead;
+        private System.Windows.Forms.RadioButton rbVADWishlist;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.Button btnAddOwned;
+        private System.Windows.Forms.Button btnAddRead;
+        private System.Windows.Forms.Button btnAddWishlist;
     }
 }
 
