@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace PersonalLibraryApp
 {
-    internal class Book
+    public class Book
     {
-        
-
-        public String BookId { get; set; }
-        public String Title { get; set; }
-        public String Description { get; set; }
-        public String AuthorLastName { get; set; }
+        public string BookId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string AuthorLastName { get; set; }
 
         public Book(string bookId, string title, string description, string authorLastName)
         {
@@ -22,10 +20,12 @@ namespace PersonalLibraryApp
             Description = description;
             AuthorLastName = authorLastName;
         }
+
         public Book() { }
+
         public virtual string Print()
         {
-            return "BookId: " + BookId + "\nTitle: " +Title + "\nDescription:" + Description + "\nAuthor Name" + AuthorLastName;
+            return $"BookId: {BookId}\nTitle: {Title}\nDescription: {Description}\nAuthor Name: {AuthorLastName}";
         }
     }
 }
