@@ -12,8 +12,8 @@ namespace PersonalLibraryApp.Forms
 {
     public partial class AddOwnedBook : Form
     {
-        private Book book = new Book();
-        private OwnedBooks ownedBook = new OwnedBooks();
+        internal Book book { get; set;}
+        internal OwnedBooks ownedBook { get; set; }
         public bool IsAdd { get; set; }
         public AddOwnedBook()
         {
@@ -29,7 +29,7 @@ namespace PersonalLibraryApp.Forms
             else
             {
                 txtBookID.Enabled = false;
-                SetBookFields(book);
+                SetOwnedBookFields(book);
             }
         }
 
@@ -47,21 +47,11 @@ namespace PersonalLibraryApp.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (rbtnExistingBook.Checked)
+            if (ValidateForm())
             {
-                if (ValidateForm())
-                {
-                    ownedBook = new OwnedBooks(book, true, dtpDateBought.Value);
-                    this.Hide();
-                }
-            }
-            else
-            {
-                if (ValidateForm())
-                {
-                    book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
-                    ownedBook = new OwnedBooks(book, true, dtpDateBought.Value);
-                }
+                this.book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
+                ownedBook = new OwnedBooks(book, true, dtpDateBought.Value);
+                this.Hide();
             }
         }
 
@@ -110,7 +100,7 @@ namespace PersonalLibraryApp.Forms
             return true;
         }
 
-        private void SetBookFields(Book book)
+        private void SetOwnedBookFields(Book book)
         {
             txtBookID.Text = book.BookId;
             txtTitle.Text = book.Title;

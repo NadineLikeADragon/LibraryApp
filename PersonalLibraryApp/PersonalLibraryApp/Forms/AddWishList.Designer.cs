@@ -39,21 +39,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rbtnExistingBook = new System.Windows.Forms.RadioButton();
             this.rbtnNewBook = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(183, 265);
+            this.button2.Location = new System.Drawing.Point(183, 361);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -63,7 +60,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(48, 265);
+            this.button1.Location = new System.Drawing.Point(48, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 8;
@@ -74,7 +71,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 139);
+            this.label4.Location = new System.Drawing.Point(45, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 7;
@@ -82,7 +79,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(48, 155);
+            this.txtDescription.Location = new System.Drawing.Point(48, 251);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(210, 96);
             this.txtDescription.TabIndex = 6;
@@ -149,30 +146,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ISBN:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(291, 139);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Existing Books";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(290, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(209, 133);
-            this.dataGridView1.TabIndex = 14;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.rbtnExistingBook);
             this.panel2.Controls.Add(this.rbtnNewBook);
-            this.panel2.Location = new System.Drawing.Point(290, 24);
+            this.panel2.Location = new System.Drawing.Point(48, 146);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(209, 65);
             this.panel2.TabIndex = 13;
@@ -220,9 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PersonalLibraryApp.Properties.Resources.AddItem_Background;
-            this.ClientSize = new System.Drawing.Size(511, 310);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(291, 412);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -233,7 +211,6 @@
             this.Text = "AddWishList";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -254,8 +231,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBookID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rbtnExistingBook;

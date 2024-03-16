@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PersonalLibraryApp
+namespace PersonalLibraryApp.Forms
 {
-    public partial class AddBook : Form
+    public partial class AddLoan : Form
     {
-        internal Book book = new Book();
+        internal LoanTracking loan = new LoanTracking();
         public bool IsAdd { get; set; }
-
-        public AddBook()
+        public AddLoan()
         {
             InitializeComponent();
         }
 
-        private void AddBook_Load(object sender, EventArgs e)
+        private void AddLoan_Load(object sender, EventArgs e)
         {
             if (IsAdd)
             {
@@ -29,32 +28,23 @@ namespace PersonalLibraryApp
             else
             {
                 txtBookID.Enabled = false;
-                SetBookFields(book);
+                SetLoanFields(loan);
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
-                book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
+                loan = new LoanTracking(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text, dtpDateBorrowed.Value, dtpDueDate.Value);
 
                 this.Hide();
             }
         }
 
-        internal Book GetBook()
+        private void button2_Click(object sender, EventArgs e)
         {
-            return book;
-        }
-        internal void SetBook(Book book)
-        {
-            this.book = book;
+            this.Hide();
         }
 
         private bool ValidateForm()
@@ -79,15 +69,27 @@ namespace PersonalLibraryApp
                 MessageBox.Show("Please describe the book");
                 return false;
             }
+            if (dtpDateBorrowed.Value > dtpDueDate.Value)
+            {
+                MessageBox.Show("The due date must be after the date borrowed");
+                return false;
+            }
+            if (dtpDateBorrowed.Value > DateTime.Now)
+            {
+                MessageBox.Show("The date borrowed must be in the past");
+                return false;
+            }
             return true;
         }
 
-        private void SetBookFields(Book book)
+        private void SetLoanFields(LoanTracking loan)
         {
-            txtBookID.Text = book.BookId;
-            txtTitle.Text = book.Title;
-            txtDescription.Text = book.Description;
-            txtAuthorSName.Text = book.AuthorLastName;
+            txtBookID.Text = loan.BookId;
+            txtTitle.Text = loan.Title;
+            txtDescription.Text = loan.Description;
+            txtAuthorSName.Text = loan.AuthorLastName;
+            dtpDateBorrowed.Value = loan.DateBorrowed;
+            dtpDueDate.Value = loan.DueDate;
         }
     }
 }

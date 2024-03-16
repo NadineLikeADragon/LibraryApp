@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PersonalLibraryApp
+namespace PersonalLibraryApp.Forms
 {
-    public partial class AddBook : Form
+    public partial class AddBookRead : Form
     {
-        internal Book book = new Book();
+        internal BooksRead bookRead = new BooksRead();
         public bool IsAdd { get; set; }
 
-        public AddBook()
+        public AddBookRead()
         {
             InitializeComponent();
         }
 
-        private void AddBook_Load(object sender, EventArgs e)
+        private void AddBookRead_Load(object sender, EventArgs e)
         {
             if (IsAdd)
             {
@@ -29,32 +29,34 @@ namespace PersonalLibraryApp
             else
             {
                 txtBookID.Enabled = false;
-                SetBookFields(book);
+                SetBookReadFields(bookRead);
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
-                book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
+                bookRead = new BooksRead(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text, chkOwned.Checked, dtpDateFinished.Value, txtReview.Text);
 
                 this.Hide();
             }
         }
 
-        internal Book GetBook()
+        private void SetBookReadFields(Book book)
         {
-            return book;
+            txtBookID.Text = book.BookId;
+            txtTitle.Text = book.Title;
+            txtDescription.Text = book.Description;
+            txtAuthorSName.Text = book.AuthorLastName;
+            dtpDateFinished.Value = bookRead.DateFinished;
+            chkOwned.Checked = bookRead.Owned;
+            txtReview.Text = bookRead.Review;
         }
-        internal void SetBook(Book book)
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.book = book;
+            this.Hide();
         }
 
         private bool ValidateForm()
@@ -79,15 +81,12 @@ namespace PersonalLibraryApp
                 MessageBox.Show("Please describe the book");
                 return false;
             }
+            if (dtpDateFinished.Value > DateTime.Now)
+            {
+                MessageBox.Show("Please enter a valid date");
+                return false;
+            }
             return true;
-        }
-
-        private void SetBookFields(Book book)
-        {
-            txtBookID.Text = book.BookId;
-            txtTitle.Text = book.Title;
-            txtDescription.Text = book.Description;
-            txtAuthorSName.Text = book.AuthorLastName;
         }
     }
 }

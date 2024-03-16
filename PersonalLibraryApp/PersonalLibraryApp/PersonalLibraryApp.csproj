@@ -54,6 +54,18 @@
     </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="BooksRead.cs" />
+    <Compile Include="Forms\AddBookRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBookRead.Designer.cs">
+      <DependentUpon>AddBookRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddLoan.Designer.cs">
+      <DependentUpon>AddLoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddOwnedBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,12 @@
     <Compile Include="WishList.cs" />
     <EmbeddedResource Include="Forms\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddBookRead.resx">
+      <DependentUpon>AddBookRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddLoan.resx">
+      <DependentUpon>AddLoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddOwnedBook.resx">
       <DependentUpon>AddOwnedBook.cs</DependentUpon>

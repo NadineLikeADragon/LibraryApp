@@ -9,7 +9,7 @@ namespace PersonalLibraryApp
 {
     internal class WishList: Book
     {
-        double Price {  get; set; }
+        public double Price {  get; set; }
         public WishList(string bookId, string title, string description, string authorLastName) : base(bookId, title, description, authorLastName)
         {
             BookId = bookId;

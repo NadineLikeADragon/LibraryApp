@@ -10,8 +10,8 @@ namespace PersonalLibraryApp
     {
       
 
-        bool Owned {  get; set; }
-        DateTime DateBought { get; set; }
+        public bool Owned {  get; set; }
+        public DateTime DateBought { get; set; }
         public OwnedBooks(string bookId, string title, string description, string authorLastName) : base(bookId, title, description, authorLastName)
         {
             BookId = bookId;
