@@ -13,9 +13,24 @@ namespace PersonalLibraryApp.Forms
     public partial class AddWishList : Form
     {
         private WishList wishList = new WishList();
+        private Book book = new Book();
+        public bool IsAdd { get; set; }
         public AddWishList()
         {
             InitializeComponent();
+        }
+
+        private void AddWishList_Load(object sender, EventArgs e)
+        {
+            if (IsAdd)
+            {
+                txtBookID.Enabled = true;
+            }
+            else
+            {
+                txtBookID.Enabled = false;
+                SetBookFields(wishList);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +51,11 @@ namespace PersonalLibraryApp.Forms
         internal WishList GetWishList()
         {
             return wishList;
+        }
+
+        internal void SetBook(Book book)
+        {
+            this.book = book;
         }
 
         private bool ValidateForm()

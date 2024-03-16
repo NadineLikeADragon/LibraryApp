@@ -12,10 +12,26 @@ namespace PersonalLibraryApp
 {
     public partial class AddBook : Form
     {
-        private Book book = new Book();
+        internal Book book = new Book();
+        internal OwnedBooks ownedBooks = new OwnedBooks();
+        public bool IsAdd { get; set; }
+
         public AddBook()
         {
             InitializeComponent();
+        }
+
+        private void AddBook_Load(object sender, EventArgs e)
+        {
+            if (IsAdd)
+            {
+                txtBookID.Enabled = true;
+            }
+            else
+            {
+                txtBookID.Enabled = false;
+                SetBookFields(book);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +52,10 @@ namespace PersonalLibraryApp
         internal Book GetBook()
         {
             return book;
+        }
+        internal void SetBook(Book book)
+        {
+            this.book = book;
         }
 
         private bool ValidateForm()

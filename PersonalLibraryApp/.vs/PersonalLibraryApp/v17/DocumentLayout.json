@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\ownedbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\ownedbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\booksread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\booksread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\forms\\addbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\forms\\addbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\forms\\addwishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\forms\\addwishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\forms\\addwishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\forms\\addwishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|c:\\users\\user\\source\\repos\\libraryapp\\personallibraryapp\\personallibraryapp\\forms\\addownedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52CB1E75-821D-447B-B1FC-BE4024710571}|PersonalLibraryApp\\PersonalLibraryApp.csproj|solutionrelative:personallibraryapp\\forms\\addownedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,65 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OwnedBooks.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\OwnedBooks.cs",
-              "RelativeDocumentMoniker": "PersonalLibraryApp\\OwnedBooks.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\OwnedBooks.cs",
-              "RelativeToolTip": "PersonalLibraryApp\\OwnedBooks.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABOAAAA",
+              "Title": "BooksRead.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\BooksRead.cs",
+              "RelativeDocumentMoniker": "PersonalLibraryApp\\BooksRead.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\BooksRead.cs",
+              "RelativeToolTip": "PersonalLibraryApp\\BooksRead.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T17:17:17.514Z",
+              "WhenOpened": "2024-03-16T18:09:17.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AddWishList.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddWishList.cs",
-              "RelativeDocumentMoniker": "PersonalLibraryApp\\Forms\\AddWishList.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddWishList.cs",
-              "RelativeToolTip": "PersonalLibraryApp\\Forms\\AddWishList.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAA2wEYAAAAtAAAA",
+              "Title": "AddBook.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddBook.cs",
+              "RelativeDocumentMoniker": "PersonalLibraryApp\\Forms\\AddBook.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddBook.cs",
+              "RelativeToolTip": "PersonalLibraryApp\\Forms\\AddBook.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T17:14:41.608Z",
+              "WhenOpened": "2024-03-16T18:08:39.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AddWishList.cs [Design]",
+              "Title": "AddWishList.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddWishList.cs",
               "RelativeDocumentMoniker": "PersonalLibraryApp\\Forms\\AddWishList.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddWishList.cs [Design]",
-              "RelativeToolTip": "PersonalLibraryApp\\Forms\\AddWishList.cs [Design]",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddWishList.cs",
+              "RelativeToolTip": "PersonalLibraryApp\\Forms\\AddWishList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T17:12:24.545Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Book.cs",
-              "RelativeDocumentMoniker": "PersonalLibraryApp\\Book.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Book.cs",
-              "RelativeToolTip": "PersonalLibraryApp\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T16:54:23.299Z",
+              "WhenOpened": "2024-03-16T18:07:17.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WishList.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\WishList.cs",
-              "RelativeDocumentMoniker": "PersonalLibraryApp\\WishList.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\WishList.cs",
-              "RelativeToolTip": "PersonalLibraryApp\\WishList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA5AAAA",
+              "Title": "AddOwnedBook.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddOwnedBook.cs",
+              "RelativeDocumentMoniker": "PersonalLibraryApp\\Forms\\AddOwnedBook.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\LibraryApp\\PersonalLibraryApp\\PersonalLibraryApp\\Forms\\AddOwnedBook.cs",
+              "RelativeToolTip": "PersonalLibraryApp\\Forms\\AddOwnedBook.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-16T16:20:18.319Z",
+              "WhenOpened": "2024-03-16T18:06:57.099Z",
               "EditorCaption": ""
             }
           ]

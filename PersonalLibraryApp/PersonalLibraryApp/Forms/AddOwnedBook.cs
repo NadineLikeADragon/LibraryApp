@@ -14,9 +14,23 @@ namespace PersonalLibraryApp.Forms
     {
         private Book book = new Book();
         private OwnedBooks ownedBook = new OwnedBooks();
+        public bool IsAdd { get; set; }
         public AddOwnedBook()
         {
             InitializeComponent();
+        }
+
+        private void AddOwnedBook_Load(object sender, EventArgs e)
+        {
+            if (IsAdd)
+            {
+                txtBookID.Enabled = true;
+            }
+            else
+            {
+                txtBookID.Enabled = false;
+                SetBookFields(book);
+            }
         }
 
         private void rbtnNewBook_CheckedChanged(object sender, EventArgs e)
@@ -59,6 +73,11 @@ namespace PersonalLibraryApp.Forms
         internal OwnedBooks GetOwnedBook()
         {
             return ownedBook;
+        }
+
+        internal void SetBook(Book book)
+        {
+            this.book = book;
         }
 
         private bool ValidateForm()
