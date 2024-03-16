@@ -63,6 +63,16 @@ namespace PersonalLibraryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddItem_Background {
+            get {
+                object obj = ResourceManager.GetObject("AddItem_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Books_1085770318 {
             get {
                 object obj = ResourceManager.GetObject("Books-1085770318", resourceCulture);

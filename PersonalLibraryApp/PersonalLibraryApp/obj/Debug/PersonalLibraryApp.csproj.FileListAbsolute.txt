@@ -1,0 +1,12 @@
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\bin\Debug\PersonalLibraryApp.exe.config
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\bin\Debug\PersonalLibraryApp.exe
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\bin\Debug\PersonalLibraryApp.pdb
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.AddBook.resources
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.Forms.AddOwnedBook.resources
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.LibraryApp.resources
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.Properties.Resources.resources
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.exe
+C:\Users\User\Source\Repos\LibraryApp\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.pdb
