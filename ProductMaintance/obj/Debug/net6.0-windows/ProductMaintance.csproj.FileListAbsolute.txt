@@ -1,8 +1,0 @@
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.csproj.AssemblyReference.cache
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.Form1.resources
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintenance.frmProductMaintenance.resources
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.csproj.GenerateResource.cache
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.AssemblyInfoInputs.cache
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.AssemblyInfo.cs
-C:\Users\Elizabeth.Bourke\OneDrive - Limerick Institute Of Technology\SD\OOTAP\ClassOf2022 2023\solutions inclass2\ProductMaintance\obj\Debug\net6.0-windows\ProductMaintance.csproj.CoreCompileInputs.cache
