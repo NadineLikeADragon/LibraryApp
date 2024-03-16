@@ -20,7 +20,7 @@ namespace PersonalLibraryApp
             AuthorLastName = authorLastName;
         }
 
-        public OwnedBooks(Book book, bool owned, DateTime dateBought) // add book object to constructor
+        public OwnedBooks(Book book, bool owned, DateTime dateBought) // added book object to constructor
         {
             BookId = book.BookId;
             Title = book.Title;

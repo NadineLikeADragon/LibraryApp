@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PersonalLibraryApp
+namespace PersonalLibraryApp.Forms
 {
-    public partial class AddBook : Form
+    public partial class AddWishList : Form
     {
-        private Book book = new Book();
-        public AddBook()
+        private WishList wishList = new WishList();
+        public AddWishList()
         {
             InitializeComponent();
         }
@@ -27,15 +27,15 @@ namespace PersonalLibraryApp
         {
             if (ValidateForm())
             {
-                book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
-
-                this.Hide();
+                Book book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
+                WishList wishList = new WishList(book, Double.Parse(txtPrice.Text));
             }
+
         }
 
-        internal Book GetBook()
+        internal WishList GetWishList()
         {
-            return book;
+            return wishList;
         }
 
         private bool ValidateForm()
@@ -58,6 +58,11 @@ namespace PersonalLibraryApp
             if (txtDescription.Text == "")
             {
                 MessageBox.Show("Please describe the book");
+                return false;
+            }
+            if (txtPrice.Text == "")
+            {
+                MessageBox.Show("Please enter the price");
                 return false;
             }
             return true;

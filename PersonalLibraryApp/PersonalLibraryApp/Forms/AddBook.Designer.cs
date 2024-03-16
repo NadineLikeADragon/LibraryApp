@@ -33,10 +33,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtAuthorSName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAuthorFName = new System.Windows.Forms.TextBox();
+            this.txtBookID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,18 +48,16 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtAuthorSName);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtAuthorFName);
+            this.panel1.Controls.Add(this.txtBookID);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(45, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 112);
+            this.panel1.Size = new System.Drawing.Size(210, 83);
             this.panel1.TabIndex = 0;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(103, 33);
+            this.txtTitle.Location = new System.Drawing.Point(107, 3);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(100, 20);
             this.txtTitle.TabIndex = 7;
@@ -69,7 +65,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 36);
+            this.label5.Location = new System.Drawing.Point(7, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 6;
@@ -77,7 +73,7 @@
             // 
             // txtAuthorSName
             // 
-            this.txtAuthorSName.Location = new System.Drawing.Point(103, 85);
+            this.txtAuthorSName.Location = new System.Drawing.Point(107, 55);
             this.txtAuthorSName.Name = "txtAuthorSName";
             this.txtAuthorSName.Size = new System.Drawing.Size(100, 20);
             this.txtAuthorSName.TabIndex = 5;
@@ -85,43 +81,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 89);
+            this.label3.Location = new System.Drawing.Point(7, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Author Surname:";
             // 
-            // txtAuthorFName
+            // txtBookID
             // 
-            this.txtAuthorFName.Location = new System.Drawing.Point(103, 59);
-            this.txtAuthorFName.Name = "txtAuthorFName";
-            this.txtAuthorFName.Size = new System.Drawing.Size(100, 20);
-            this.txtAuthorFName.TabIndex = 3;
+            this.txtBookID.Location = new System.Drawing.Point(107, 29);
+            this.txtBookID.Name = "txtBookID";
+            this.txtBookID.Size = new System.Drawing.Size(100, 20);
+            this.txtBookID.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 62);
+            this.label2.Location = new System.Drawing.Point(7, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Author Name:";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(103, 7);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
+            this.label2.Text = "ISBN:";
             // 
             // txtDescription
             // 
@@ -183,11 +163,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtAuthorFName;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAuthorSName;
         private System.Windows.Forms.RichTextBox txtDescription;
         private System.Windows.Forms.Label label4;
@@ -195,5 +171,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBookID;
+        private System.Windows.Forms.Label label2;
     }
 }

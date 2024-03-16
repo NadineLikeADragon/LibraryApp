@@ -9,8 +9,6 @@ namespace PersonalLibraryApp
 {
     internal class WishList: Book
     {
-        
-
         double Price {  get; set; }
         public WishList(string bookId, string title, string description, string authorLastName) : base(bookId, title, description, authorLastName)
         {
@@ -19,7 +17,7 @@ namespace PersonalLibraryApp
             Description = description;
             AuthorLastName = authorLastName;
         }
-        public WishList(double price)
+        public WishList(Book book, double price) // added book object to constructor
         {
             Price = price;
         }

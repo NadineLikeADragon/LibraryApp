@@ -45,7 +45,7 @@ namespace PersonalLibraryApp.Forms
             {
                 if (ValidateForm())
                 {
-                    book = new Book(txtAuthorFName.Text, txtAuthorSName.Text, txtTitle.Text, txtDescription.Text);
+                    book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
                     ownedBook = new OwnedBooks(book, true, dtpDateBought.Value);
                 }
             }
@@ -68,7 +68,12 @@ namespace PersonalLibraryApp.Forms
                 MessageBox.Show("Please enter the title");
                 return false;
             }
-            if (txtAuthorFName.Text == "" || txtAuthorSName.Text == "")
+            if (txtBookID.Text == "")
+            {
+                MessageBox.Show("Please enter the book ID");
+                return false;
+            }
+            if (txtAuthorSName.Text == "")
             {
                 MessageBox.Show("Please enter the author name");
                 return false;
@@ -80,10 +85,18 @@ namespace PersonalLibraryApp.Forms
             }
             if (dtpDateBought.Value > DateTime.Now)
             {
-                MessageBox.Show("Please enter a valid date");
+                MessageBox.Show("Date bought cannot be in the future");
                 return false;
             }
             return true;
+        }
+
+        private void SetBookFields(Book book)
+        {
+            txtBookID.Text = book.BookId;
+            txtTitle.Text = book.Title;
+            txtDescription.Text = book.Description;
+            txtAuthorSName.Text = book.AuthorLastName;
         }
     }
 }
