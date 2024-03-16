@@ -1,0 +1,10 @@
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\bin\Debug\PersonalLibraryApp.exe.config
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\bin\Debug\PersonalLibraryApp.exe
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\bin\Debug\PersonalLibraryApp.pdb
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.csproj.AssemblyReference.cache
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.LibraryApp.resources
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.Properties.Resources.resources
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.csproj.GenerateResource.cache
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.exe
+C:\Users\sonic\Downloads\PersonalLibraryApp\PersonalLibraryApp\obj\Debug\PersonalLibraryApp.pdb
