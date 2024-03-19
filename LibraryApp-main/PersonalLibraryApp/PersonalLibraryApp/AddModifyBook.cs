@@ -52,6 +52,7 @@ namespace PersonalLibraryApp
             Book.Title = txtTitle.Text;
             Book.Description = rtxtDescription.Text;
             Book.AuthorLastName = txtSurname.Text;
+            Book.DateBought = Convert.ToDateTime(txtDatePicked.Text);
         }
 
         private void btnAddBook_Click_1(object sender, EventArgs e)
@@ -83,5 +84,6 @@ namespace PersonalLibraryApp
                 DisplayBook();
             }
         }
+
     }
 }

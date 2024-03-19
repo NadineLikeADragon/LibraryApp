@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDatePicked = new System.Windows.Forms.TextBox();
+            this.lbdate = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtBookId = new System.Windows.Forms.TextBox();
@@ -39,23 +41,40 @@
             this.rtxtDescription = new System.Windows.Forms.RichTextBox();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnModify = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtDatePicked);
+            this.groupBox1.Controls.Add(this.lbdate);
             this.groupBox1.Controls.Add(this.txtSurname);
             this.groupBox1.Controls.Add(this.txtTitle);
             this.groupBox1.Controls.Add(this.txtBookId);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(71, 36);
+            this.groupBox1.Location = new System.Drawing.Point(71, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 165);
+            this.groupBox1.Size = new System.Drawing.Size(236, 198);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // txtDatePicked
+            // 
+            this.txtDatePicked.Location = new System.Drawing.Point(109, 162);
+            this.txtDatePicked.Name = "txtDatePicked";
+            this.txtDatePicked.Size = new System.Drawing.Size(100, 20);
+            this.txtDatePicked.TabIndex = 7;
+            // 
+            // lbdate
+            // 
+            this.lbdate.AutoSize = true;
+            this.lbdate.Location = new System.Drawing.Point(19, 165);
+            this.lbdate.Name = "lbdate";
+            this.lbdate.Size = new System.Drawing.Size(67, 13);
+            this.lbdate.TabIndex = 6;
+            this.lbdate.Text = "Date Bought";
             // 
             // txtSurname
             // 
@@ -141,22 +160,12 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // btnModify
-            // 
-            this.btnModify.Location = new System.Drawing.Point(151, 340);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(75, 23);
-            this.btnModify.TabIndex = 5;
-            this.btnModify.Text = "Modify Book";
-            this.btnModify.UseVisualStyleBackColor = true;
-            // 
             // AddModifyBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(380, 386);
-            this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.rtxtDescription);
@@ -185,6 +194,7 @@
         private System.Windows.Forms.RichTextBox rtxtDescription;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Label lbdate;
+        private System.Windows.Forms.TextBox txtDatePicked;
     }
 }

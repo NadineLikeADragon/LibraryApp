@@ -39,13 +39,14 @@ namespace PersonalLibraryApp
             dgvOwnedBooks.Columns.Clear();
             dgvOwnedBooks.DataSource = new BindingList<OwnedBooks>(booksInStock.ToList());
 
-            // Add column for modify button
-            var modifyColumn = new DataGridViewButtonColumn()
-            {
-                UseColumnTextForButtonValue = true,
-                HeaderText = "",
-                Text = "Modify"
-            };
+            //Add column for modify button
+
+           var modifyColumn = new DataGridViewButtonColumn()
+           {
+               UseColumnTextForButtonValue = true,
+               HeaderText = "",
+               Text = "Modify"
+           };
             dgvOwnedBooks.Columns.Add(modifyColumn);
 
             // Add column for delete button
@@ -182,8 +183,8 @@ namespace PersonalLibraryApp
         private void dgvOwnedBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            const int ModifyIndex = 4;
-            const int DeleteIndex = 5;
+            const int ModifyIndex = 5;
+            const int DeleteIndex = 6;
 
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
