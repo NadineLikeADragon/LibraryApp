@@ -23,9 +23,5 @@ namespace PersonalLibraryApp
 
         public Book() { }
 
-        public virtual string Print()
-        {
-            return $"BookId: {BookId}\nTitle: {Title}\nDescription: {Description}\nAuthor Name: {AuthorLastName}";
-        }
     }
 }
