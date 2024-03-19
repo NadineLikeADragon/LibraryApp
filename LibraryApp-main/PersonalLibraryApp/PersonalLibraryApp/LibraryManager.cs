@@ -9,7 +9,7 @@ namespace PersonalLibraryApp
 {
     public partial class LibraryManager : Form
     {
-        List<OwnedBooks> booksInStock = new List<OwnedBooks>();
+        List<OwnedBooks> ownedBooks = new List<OwnedBooks>();
         public LibraryManager()
         {
             loadDataToList();
@@ -23,12 +23,12 @@ namespace PersonalLibraryApp
         private void loadDataToList()
         {
             DateTime date1 = Convert.ToDateTime("7/10/2023");
-            OwnedBooks b0 = new OwnedBooks("B001", "Book 1", "Description 1", "Author 1", date1);
-            OwnedBooks b1 = new OwnedBooks("B002", "Book 2", "Description 2", "Author 2", date1);
-            OwnedBooks b2 = new OwnedBooks("B003", "Book 3", "Description 3", "Author 3", date1);
-            booksInStock.Add(b0);
-            booksInStock.Add(b1);
-            booksInStock.Add(b2);
+            OwnedBooks b0 = new OwnedBooks("978-0544003415", "The Lord of the Rings", "Frodo does nothing, Sam does", "J.R.R Tolkien", date1);
+            OwnedBooks b1 = new OwnedBooks("978-0441172719", "Dune", "Son becomes worm king", "Frank Herbert", date1);
+            OwnedBooks b2 = new OwnedBooks("978-0349013329", "Anne of the Green Gables", "Somehow orphan child is endearing but irritating", "L.M Montgomery", date1);
+            ownedBooks.Add(b0);
+            ownedBooks.Add(b1);
+            ownedBooks.Add(b2);
         }
 
         private OwnedBooks selectedBook;
@@ -37,7 +37,7 @@ namespace PersonalLibraryApp
         private void DisplayOwnedBooks()
         {
             dgvOwnedBooks.Columns.Clear();
-            dgvOwnedBooks.DataSource = new BindingList<OwnedBooks>(booksInStock.ToList());
+            dgvOwnedBooks.DataSource = new BindingList<OwnedBooks>(ownedBooks.ToList());
 
             //Add column for modify button
 
@@ -61,8 +61,8 @@ namespace PersonalLibraryApp
             // Format the column headers
             dgvOwnedBooks.EnableHeadersVisualStyles = false;
             dgvOwnedBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
-            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.Aquamarine;
-            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
+            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
 
             // Format the odd-numbered rows
             dgvOwnedBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
@@ -80,7 +80,7 @@ namespace PersonalLibraryApp
 
         private OwnedBooks GetBook(string bookId)
         {
-            foreach (OwnedBooks book in booksInStock)
+            foreach (OwnedBooks book in ownedBooks)
             {
                 if (book.BookId.Equals(bookId))
                 {
@@ -110,7 +110,7 @@ namespace PersonalLibraryApp
             {
                 try
                 {
-                    booksInStock[indexOfOld] = selectedBook;
+                    ownedBooks[indexOfOld] = selectedBook;
                     DisplayOwnedBooks();
                 }
                 catch (Exception ex)
@@ -127,7 +127,7 @@ namespace PersonalLibraryApp
             {
                 try
                 {
-                    if (booksInStock.Remove(selectedBook))
+                    if (ownedBooks.Remove(selectedBook))
                     {
                         DisplayOwnedBooks();
                     }
@@ -162,7 +162,7 @@ namespace PersonalLibraryApp
                 try
                 {
                     selectedBook = addModifyBookForm.Book;
-                    booksInStock.Add(selectedBook);
+                    ownedBooks.Add(selectedBook);
                     DisplayOwnedBooks();
                 }
                 catch (Exception ex)
@@ -177,6 +177,7 @@ namespace PersonalLibraryApp
             if (rbVADOwned.Checked)
             {
                 DisplayOwnedBooks();
+                btnAddOwned.Visible = true;
             }
         }
 
