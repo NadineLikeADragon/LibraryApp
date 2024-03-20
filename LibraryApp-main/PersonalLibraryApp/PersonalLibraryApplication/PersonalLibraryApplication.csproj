@@ -16,6 +16,9 @@
       <Compile Update="Forms\LibraryManager\LibraryManager.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="Forms\AddBook\AddBook.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>
