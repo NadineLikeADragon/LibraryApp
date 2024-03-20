@@ -2,7 +2,7 @@
 {
     public class OwnedBooks : Book
     {
-        bool Owned {  get; set; }
+        public bool Owned {  get; set; }
         public DateTime DateBought { get; set; }
 
         // TODO: Ctor from old main.

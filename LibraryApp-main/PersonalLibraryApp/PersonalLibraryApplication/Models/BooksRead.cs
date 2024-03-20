@@ -4,9 +4,9 @@
     {
         
 
-        bool Owned {  get; set; }
-        DateTime DateFinished { get; set; }
-        String Review {  get; set; }
+        public bool Owned {  get; set; }
+        public DateTime DateFinished { get; set; }
+        public String Review {  get; set; }
         public BooksRead(string bookId, string title, string description, string authorLastName) : base(bookId, title, description, authorLastName)
         {
             BookId = bookId;

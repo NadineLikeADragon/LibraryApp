@@ -2,8 +2,8 @@
 {
     internal class LoanTracking:Book
     {
-        DateTime DateBorrowed {  get; set; }
-        DateTime DueDate { get; set; }
+        public DateTime DateBorrowed {  get; set; }
+        public DateTime DueDate { get; set; }
          public LoanTracking(string bookId, string title, string description, string authorLastName) : base(bookId, title, description, authorLastName)
         {
             BookId = bookId;
