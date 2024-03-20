@@ -16,6 +16,12 @@
         {
             Price = price;
         }
+        
+        public WishList(Book book, double price) // added book object to constructor
+        {
+            Price = price;
+        }
+        
         public WishList(string bookId, string title, string description, string authorLastName,double price) : base(bookId, title, description, authorLastName)
         {
             BookId = bookId;
