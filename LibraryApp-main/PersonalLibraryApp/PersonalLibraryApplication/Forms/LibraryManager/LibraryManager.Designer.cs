@@ -1,4 +1,4 @@
-﻿namespace PersonalLibraryApplication.Forms
+﻿namespace PersonalLibraryApplication.Forms.LibraryManager
 {
     partial class LibraryManager
     {

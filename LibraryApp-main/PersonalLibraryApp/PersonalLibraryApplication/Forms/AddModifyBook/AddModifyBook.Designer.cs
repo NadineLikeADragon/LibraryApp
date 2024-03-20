@@ -1,4 +1,4 @@
-﻿namespace PersonalLibraryApplication.Forms
+﻿namespace PersonalLibraryApplication.Forms.AddModifyBook
 {
     partial class AddModifyBook
     {

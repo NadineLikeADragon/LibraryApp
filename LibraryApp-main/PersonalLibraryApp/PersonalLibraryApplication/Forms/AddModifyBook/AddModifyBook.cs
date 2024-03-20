@@ -1,6 +1,6 @@
 ﻿using PersonalLibraryApplication.Models;
 
-namespace PersonalLibraryApplication.Forms
+namespace PersonalLibraryApplication.Forms.AddModifyBook
 {
     public partial class AddModifyBook : Form
     {

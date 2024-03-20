@@ -10,10 +10,10 @@
 
 
     <ItemGroup>
-      <Compile Update="Forms\AddModifyBook.cs">
+      <Compile Update="Forms\AddModifyBook\AddModifyBook.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="Forms\LibraryManager.cs">
+      <Compile Update="Forms\LibraryManager\LibraryManager.cs">
         <SubType>Form</SubType>
       </Compile>
     </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using PersonalLibraryApplication.Models;
 
-namespace PersonalLibraryApplication.Forms
+namespace PersonalLibraryApplication.Forms.LibraryManager
 {
     public partial class LibraryManager : Form
     {
@@ -96,7 +96,7 @@ namespace PersonalLibraryApplication.Forms
                 AuthorLastName = selectedBook.AuthorLastName,
                 DateBought = selectedBook.DateBought,
             };
-            var addModifyBookForm = new AddModifyBook()
+            var addModifyBookForm = new AddModifyBook.AddModifyBook()
             {
                 AddBook = false,
                 Book = selectedBook
@@ -148,7 +148,7 @@ namespace PersonalLibraryApplication.Forms
         private void btnAddOwned_Click(object sender, EventArgs e)
         {
 
-            var addModifyBookForm = new AddModifyBook()
+            var addModifyBookForm = new AddModifyBook.AddModifyBook()
             {
                 AddBook = true
             };
