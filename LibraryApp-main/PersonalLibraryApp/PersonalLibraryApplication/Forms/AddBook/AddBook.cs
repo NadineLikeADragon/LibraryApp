@@ -19,7 +19,7 @@ public partial class AddBook : Form
 	{
 		if (ValidateForm())
 		{
-			book = new Book(txtAuthorFName.Text, txtAuthorSName.Text, txtTitle.Text, txtDescription.Text);
+			book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
 
 			this.Hide();
 		}
@@ -37,7 +37,12 @@ public partial class AddBook : Form
 			MessageBox.Show("Please enter the title");
 			return false;
 		}
-		if (txtAuthorFName.Text == "" || txtAuthorSName.Text == "")
+		if (txtBookID.Text == "")
+		{
+			MessageBox.Show("Please enter the book ID");
+			return false;
+		}
+		if (txtAuthorSName.Text == "")
 		{
 			MessageBox.Show("Please enter the author name");
 			return false;
@@ -48,5 +53,13 @@ public partial class AddBook : Form
 			return false;
 		}
 		return true;
+	}
+
+	private void SetBookFields(Book book)
+	{
+		txtBookID.Text = book.BookId;
+		txtTitle.Text = book.Title;
+		txtDescription.Text = book.Description;
+		txtAuthorSName.Text = book.AuthorLastName;
 	}
 }
