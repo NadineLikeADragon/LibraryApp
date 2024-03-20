@@ -5,7 +5,6 @@ namespace PersonalLibraryApplication.Forms.AddBook;
 public partial class AddBook : Form
 {
     internal Book book = new Book();
-    internal OwnedBooks ownedBooks = new OwnedBooks();
     public bool IsAdd { get; set; }
 
     public AddBook()

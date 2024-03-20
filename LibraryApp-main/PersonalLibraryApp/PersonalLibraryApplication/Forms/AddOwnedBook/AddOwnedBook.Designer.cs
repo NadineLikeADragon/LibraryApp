@@ -45,13 +45,8 @@ partial class AddOwnedBook
         this.panel2 = new System.Windows.Forms.Panel();
         this.label6 = new System.Windows.Forms.Label();
         this.dtpDateBought = new System.Windows.Forms.DateTimePicker();
-        this.rbtnExistingBook = new System.Windows.Forms.RadioButton();
-        this.rbtnNewBook = new System.Windows.Forms.RadioButton();
-        this.dataGridView1 = new System.Windows.Forms.DataGridView();
-        this.label7 = new System.Windows.Forms.Label();
         this.panel1.SuspendLayout();
         this.panel2.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
         this.SuspendLayout();
         // 
         // panel1
@@ -119,7 +114,7 @@ partial class AddOwnedBook
         // 
         // button2
         // 
-        this.button2.Location = new System.Drawing.Point(182, 263);
+        this.button2.Location = new System.Drawing.Point(182, 318);
         this.button2.Name = "button2";
         this.button2.Size = new System.Drawing.Size(75, 23);
         this.button2.TabIndex = 9;
@@ -129,7 +124,7 @@ partial class AddOwnedBook
         // 
         // button1
         // 
-        this.button1.Location = new System.Drawing.Point(47, 263);
+        this.button1.Location = new System.Drawing.Point(47, 318);
         this.button1.Name = "button1";
         this.button1.Size = new System.Drawing.Size(75, 23);
         this.button1.TabIndex = 8;
@@ -140,7 +135,7 @@ partial class AddOwnedBook
         // label4
         // 
         this.label4.AutoSize = true;
-        this.label4.Location = new System.Drawing.Point(44, 137);
+        this.label4.Location = new System.Drawing.Point(44, 192);
         this.label4.Name = "label4";
         this.label4.Size = new System.Drawing.Size(63, 13);
         this.label4.TabIndex = 7;
@@ -149,7 +144,7 @@ partial class AddOwnedBook
         // txtDescription
         // 
         this.txtDescription.Enabled = false;
-        this.txtDescription.Location = new System.Drawing.Point(47, 153);
+        this.txtDescription.Location = new System.Drawing.Point(47, 208);
         this.txtDescription.Name = "txtDescription";
         this.txtDescription.Size = new System.Drawing.Size(210, 96);
         this.txtDescription.TabIndex = 6;
@@ -159,17 +154,15 @@ partial class AddOwnedBook
         // 
         this.panel2.Controls.Add(this.label6);
         this.panel2.Controls.Add(this.dtpDateBought);
-        this.panel2.Controls.Add(this.rbtnExistingBook);
-        this.panel2.Controls.Add(this.rbtnNewBook);
-        this.panel2.Location = new System.Drawing.Point(290, 22);
+        this.panel2.Location = new System.Drawing.Point(47, 129);
         this.panel2.Name = "panel2";
-        this.panel2.Size = new System.Drawing.Size(209, 112);
+        this.panel2.Size = new System.Drawing.Size(209, 50);
         this.panel2.TabIndex = 10;
         // 
         // label6
         // 
         this.label6.AutoSize = true;
-        this.label6.Location = new System.Drawing.Point(4, 40);
+        this.label6.Location = new System.Drawing.Point(3, 0);
         this.label6.Name = "label6";
         this.label6.Size = new System.Drawing.Size(67, 13);
         this.label6.TabIndex = 3;
@@ -177,59 +170,16 @@ partial class AddOwnedBook
         // 
         // dtpDateBought
         // 
-        this.dtpDateBought.Location = new System.Drawing.Point(3, 59);
+        this.dtpDateBought.Location = new System.Drawing.Point(2, 19);
         this.dtpDateBought.Name = "dtpDateBought";
         this.dtpDateBought.Size = new System.Drawing.Size(200, 20);
         this.dtpDateBought.TabIndex = 2;
-        // 
-        // rbtnExistingBook
-        // 
-        this.rbtnExistingBook.AutoSize = true;
-        this.rbtnExistingBook.Checked = true;
-        this.rbtnExistingBook.Location = new System.Drawing.Point(108, 10);
-        this.rbtnExistingBook.Name = "rbtnExistingBook";
-        this.rbtnExistingBook.Size = new System.Drawing.Size(89, 17);
-        this.rbtnExistingBook.TabIndex = 1;
-        this.rbtnExistingBook.TabStop = true;
-        this.rbtnExistingBook.Text = "Existing Book";
-        this.rbtnExistingBook.UseVisualStyleBackColor = true;
-        this.rbtnExistingBook.CheckedChanged += new System.EventHandler(this.rbtnExistingBook_CheckedChanged);
-        // 
-        // rbtnNewBook
-        // 
-        this.rbtnNewBook.AutoSize = true;
-        this.rbtnNewBook.Location = new System.Drawing.Point(4, 9);
-        this.rbtnNewBook.Name = "rbtnNewBook";
-        this.rbtnNewBook.Size = new System.Drawing.Size(75, 17);
-        this.rbtnNewBook.TabIndex = 0;
-        this.rbtnNewBook.Text = "New Book";
-        this.rbtnNewBook.UseVisualStyleBackColor = true;
-        this.rbtnNewBook.CheckedChanged += new System.EventHandler(this.rbtnNewBook_CheckedChanged);
-        // 
-        // dataGridView1
-        // 
-        this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dataGridView1.Location = new System.Drawing.Point(290, 153);
-        this.dataGridView1.Name = "dataGridView1";
-        this.dataGridView1.Size = new System.Drawing.Size(209, 133);
-        this.dataGridView1.TabIndex = 11;
-        // 
-        // label7
-        // 
-        this.label7.AutoSize = true;
-        this.label7.Location = new System.Drawing.Point(291, 137);
-        this.label7.Name = "label7";
-        this.label7.Size = new System.Drawing.Size(76, 13);
-        this.label7.TabIndex = 12;
-        this.label7.Text = "Existing Books";
         // 
         // AddOwnedBook
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(511, 308);
-        this.Controls.Add(this.label7);
-        this.Controls.Add(this.dataGridView1);
+        this.ClientSize = new System.Drawing.Size(285, 352);
         this.Controls.Add(this.panel2);
         this.Controls.Add(this.panel1);
         this.Controls.Add(this.button2);
@@ -242,7 +192,6 @@ partial class AddOwnedBook
         this.panel1.PerformLayout();
         this.panel2.ResumeLayout(false);
         this.panel2.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();
 
@@ -262,10 +211,6 @@ partial class AddOwnedBook
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.RichTextBox txtDescription;
     private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.RadioButton rbtnExistingBook;
-    private System.Windows.Forms.RadioButton rbtnNewBook;
     private System.Windows.Forms.DateTimePicker dtpDateBought;
     private System.Windows.Forms.Label label6;
-    private System.Windows.Forms.DataGridView dataGridView1;
-    private System.Windows.Forms.Label label7;
 }

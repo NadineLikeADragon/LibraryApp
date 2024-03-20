@@ -149,7 +149,7 @@ partial class AddBook
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         // TODO: Background image.
         //this.BackgroundImage = global::PersonalLibraryApp.Properties.Resources.AddItem_Background;
-        this.ClientSize = new System.Drawing.Size(302, 312);
+        this.ClientSize = new System.Drawing.Size(302, 315);
         this.Controls.Add(this.button2);
         this.Controls.Add(this.button1);
         this.Controls.Add(this.label4);
