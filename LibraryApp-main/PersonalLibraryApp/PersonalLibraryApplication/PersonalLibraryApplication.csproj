@@ -19,6 +19,9 @@
       <Compile Update="Forms\AddBook\AddBook.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="Forms\AddOwnedBook\AddOwnedBook.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>
