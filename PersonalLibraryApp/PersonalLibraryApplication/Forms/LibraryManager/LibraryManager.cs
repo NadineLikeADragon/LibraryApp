@@ -52,8 +52,8 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
         private void DisplayReadBooks()
         {
-            dgvReadBooks.Columns.Clear();
-            dgvReadBooks.DataSource = new BindingList<BooksRead>(booksRead.ToList());
+            dgvBooks.Columns.Clear();
+            dgvBooks.DataSource = new BindingList<BooksRead>(booksRead.ToList());
 
             //Add column for modify button
 
@@ -63,7 +63,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 HeaderText = "",
                 Text = "Modify"
             };
-            dgvReadBooks.Columns.Add(modifyColumn);
+            dgvBooks.Columns.Add(modifyColumn);
 
             // Add column for delete button
             var deleteColumn = new DataGridViewButtonColumn()
@@ -72,28 +72,28 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 HeaderText = "",
                 Text = "Delete"
             };
-            dgvReadBooks.Columns.Add(deleteColumn);
+            dgvBooks.Columns.Add(deleteColumn);
 
             // Format the column headers
-            dgvReadBooks.EnableHeadersVisualStyles = false;
-            dgvReadBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
-            dgvReadBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
-            dgvReadBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
+            dgvBooks.EnableHeadersVisualStyles = false;
+            dgvBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
+            dgvBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
 
             // Format the odd-numbered rows
-            dgvReadBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            dgvBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
 
             // Format the columns
-            dgvReadBooks.Columns["BookId"].HeaderText = "Book ID";
-            dgvReadBooks.Columns["Description"].Width = 240;
-            dgvReadBooks.Columns["AuthorLastName"].HeaderText = "Author";
-            dgvReadBooks.Columns["AuthorLastName"].Width = 120;
+            dgvBooks.Columns["BookId"].HeaderText = "Book ID";
+            dgvBooks.Columns["Description"].Width = 240;
+            dgvBooks.Columns["AuthorLastName"].HeaderText = "Author";
+            dgvBooks.Columns["AuthorLastName"].Width = 120;
         }
 
         private void DisplayWishListBooks()
         {
-            dgvWishlistBooks.Columns.Clear();
-            dgvWishlistBooks.DataSource = new BindingList<WishList>(wishListItems.ToList());
+            dgvBooks.Columns.Clear();
+            dgvBooks.DataSource = new BindingList<WishList>(wishListItems.ToList());
 
             //Add column for modify button
 
@@ -103,7 +103,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 HeaderText = "",
                 Text = "Modify"
             };
-            dgvWishlistBooks.Columns.Add(modifyColumn);
+            dgvBooks.Columns.Add(modifyColumn);
 
             // Add column for delete button
             var deleteColumn = new DataGridViewButtonColumn()
@@ -112,29 +112,29 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 HeaderText = "",
                 Text = "Delete"
             };
-            dgvWishlistBooks.Columns.Add(deleteColumn);
+            dgvBooks.Columns.Add(deleteColumn);
 
             // Format the column headers
-            dgvWishlistBooks.EnableHeadersVisualStyles = false;
-            dgvWishlistBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
-            dgvWishlistBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
-            dgvWishlistBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
+            dgvBooks.EnableHeadersVisualStyles = false;
+            dgvBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
+            dgvBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
 
             // Format the odd-numbered rows
-            dgvWishlistBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            dgvBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
 
             // Format the columns
-            dgvWishlistBooks.Columns["BookId"].HeaderText = "Book ID";
-            dgvWishlistBooks.Columns["Description"].Width = 240;
-            dgvWishlistBooks.Columns["AuthorLastName"].HeaderText = "Author";
-            dgvWishlistBooks.Columns["AuthorLastName"].Width = 120;
+            dgvBooks.Columns["BookId"].HeaderText = "Book ID";
+            dgvBooks.Columns["Description"].Width = 240;
+            dgvBooks.Columns["AuthorLastName"].HeaderText = "Author";
+            dgvBooks.Columns["AuthorLastName"].Width = 120;
         }
 
 
         private void DisplayOwnedBooks()
         {
-            dgvOwnedBooks.Columns.Clear();
-            dgvOwnedBooks.DataSource = new BindingList<OwnedBooks>(ownedBooks.ToList());
+            dgvBooks.Columns.Clear();
+            dgvBooks.DataSource = new BindingList<OwnedBooks>(ownedBooks.ToList());
 
             //Add column for modify button
 
@@ -144,7 +144,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 HeaderText = "",
                 Text = "Modify"
             };
-            dgvOwnedBooks.Columns.Add(modifyColumn);
+            dgvBooks.Columns.Add(modifyColumn);
 
             // Add column for delete button
             var deleteColumn = new DataGridViewButtonColumn()
@@ -153,22 +153,22 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 HeaderText = "",
                 Text = "Delete"
             };
-            dgvOwnedBooks.Columns.Add(deleteColumn);
+            dgvBooks.Columns.Add(deleteColumn);
 
             // Format the column headers
-            dgvOwnedBooks.EnableHeadersVisualStyles = false;
-            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
-            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
-            dgvOwnedBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
+            dgvBooks.EnableHeadersVisualStyles = false;
+            dgvBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
+            dgvBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
 
             // Format the odd-numbered rows
-            dgvOwnedBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            dgvBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
 
             // Format the columns
-            dgvOwnedBooks.Columns["BookId"].HeaderText = "Book ID";
-            dgvOwnedBooks.Columns["Description"].Width = 240;
-            dgvOwnedBooks.Columns["AuthorLastName"].HeaderText = "Author";
-            dgvOwnedBooks.Columns["AuthorLastName"].Width = 120;
+            dgvBooks.Columns["BookId"].HeaderText = "Book ID";
+            dgvBooks.Columns["Description"].Width = 240;
+            dgvBooks.Columns["AuthorLastName"].HeaderText = "Author";
+            dgvBooks.Columns["AuthorLastName"].Width = 120;
         }
 
         private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -393,7 +393,9 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             if (rbVADOwned.Checked)
             {
                 DisplayOwnedBooks();
-                btnAddOwned.Visible = true;
+                btnAddOwned.Enabled = true;
+                btnAddRead.Enabled = false;
+                btnAddWishlist.Enabled = false;
             }
         }
 
@@ -404,7 +406,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
-                string bookId = dgvOwnedBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
                 selectedBook = GetBook(bookId);
             }
 
@@ -425,7 +427,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
-                string bookId = dgvReadBooks.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
                 selectedReadBook = GetReadBook(bookId);
             }
 
@@ -444,7 +446,9 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             if (rbVADRead.Checked)
             {
                 DisplayReadBooks();
-                btnAddRead.Visible = true;
+                btnAddOwned.Enabled = false;
+                btnAddRead.Enabled = true;
+                btnAddWishlist.Enabled = false;
             }
         }
 
@@ -476,7 +480,9 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             if (rbVADWishlist.Checked)
             {
                 DisplayWishListBooks();
-                btnAddWishlist.Visible = true;
+                btnAddOwned.Enabled = false;
+                btnAddRead.Enabled = false;
+                btnAddWishlist.Enabled = true;
             }
         }
 
@@ -509,7 +515,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
-                string bookId = dgvWishlistBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
                 selectedWishlistItem = GetWishListBook(bookId);
             }
 
