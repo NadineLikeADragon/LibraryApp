@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Net;
 using PersonalLibraryApplication.Models;
 
 namespace PersonalLibraryApplication.Forms.LibraryManager
@@ -334,20 +335,13 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
         private void ModifyOwnedBook(int indexOfOld)
         {
-            var oldBook = new OwnedBooks
+            var oldBook = new OwnedBooks(selectedOwnedBook.BookId, selectedOwnedBook.Title, selectedOwnedBook.Description, selectedOwnedBook.AuthorLastName, selectedOwnedBook.DateBought);
+            var addOwnedBookForm = new AddOwnedBook.AddOwnedBook
             {
-                BookId = selectedOwnedBook.BookId,
-                Title = selectedOwnedBook.Title,
-                Description = selectedOwnedBook.Description,
-                AuthorLastName = selectedOwnedBook.AuthorLastName,
-                DateBought = selectedOwnedBook.DateBought,
+                IsAdd = false,
+                ownedBook = selectedOwnedBook,
             };
-            var addModifyBookForm = new AddModifyBook.AddModifyBook()
-            {
-                AddBook = false,
-                Book = selectedOwnedBook
-            };
-            DialogResult result = addModifyBookForm.ShowDialog();
+            DialogResult result = addOwnedBookForm.ShowDialog();
             if (result == DialogResult.OK)
             {
                 try
@@ -466,38 +460,100 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
         private void dgvBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int ModifyIndex, DeleteIndex;
+            int ModifyIndex = 0, DeleteIndex = 0;
+
+            // ModifyDeleteOwnedBook logic extracted to a separate method and altered to handle all other child types
 
             if (rbVADOwned.Checked) // indices for the owned books DGV
             {
                 ModifyIndex = 6;
                 DeleteIndex = 7;
+
+                ModifyDeleteOwnedBook(e, ModifyIndex, DeleteIndex);
             }
             else if (rbVADRead.Checked) // indices for the read books DGV
             {
                 ModifyIndex = 7;
                 DeleteIndex = 8;
+
+                ModifyDeleteReadBook(e, ModifyIndex, DeleteIndex);
             }
             else if (rbVADWishlist.Checked) // indices for the wishlist DGV
             {
                 ModifyIndex = 5;
                 DeleteIndex = 6;
+
+                ModifyDeleteWishListBook(e, ModifyIndex, DeleteIndex);
             }
             else if (rbVADLoans.Checked) // indices for the loaned books DGV
             {
                 ModifyIndex = 7;
                 DeleteIndex = 8;
-            }
-            else // TODO: one more case required to handle the migration of wishlist items to the owned books list
-            {
-                ModifyIndex = 0;
-                DeleteIndex = 0;
-            }
 
+                ModifyDeleteLoanBook(e, ModifyIndex, DeleteIndex);
+            }
+        }
+
+        private void ModifyDeleteOwnedBook(DataGridViewCellEventArgs e, int ModifyIndex, int DeleteIndex)
+        {
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
                 string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
-                selectedBook = GetOwnedBook(bookId);
+                selectedOwnedBook = GetOwnedBook(bookId);
+            }
+
+            if (e.ColumnIndex == ModifyIndex)
+            {
+                ModifyOwnedBook(e.RowIndex);
+            }
+            else if (e.ColumnIndex == DeleteIndex)
+            {
+                DeleteOwnedBook();
+            }
+        }
+
+        private void ModifyDeleteReadBook(DataGridViewCellEventArgs e, int ModifyIndex, int DeleteIndex)
+        {
+            if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
+            {
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[3].Value.ToString().Trim();
+                selectedReadBook = GetReadBook(bookId);
+            }
+
+            if (e.ColumnIndex == ModifyIndex)
+            {
+                ModifyReadBook(e.RowIndex);
+            }
+            else if (e.ColumnIndex == DeleteIndex)
+            {
+                DeleteReadBook();
+            }
+        }
+
+        private void ModifyDeleteWishListBook(DataGridViewCellEventArgs e, int ModifyIndex, int DeleteIndex)
+        {
+            if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
+            {
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[1].Value.ToString().Trim();
+                selectedWishlistItem = GetWishListBook(bookId);
+            }
+
+            if (e.ColumnIndex == ModifyIndex)
+            {
+                ModifyWishListBook(e.RowIndex);
+            }
+            else if (e.ColumnIndex == DeleteIndex)
+            {
+                DeleteWishListBook();
+            }
+        }
+
+        private void ModifyDeleteLoanBook(DataGridViewCellEventArgs e, int ModifyIndex, int DeleteIndex)
+        {
+            if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
+            {
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+                selectedLoan = GetLoan(bookId);
             }
 
             if (e.ColumnIndex == ModifyIndex)

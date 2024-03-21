@@ -10,6 +10,8 @@
             Title = title;
             Description = description;
             AuthorLastName = authorLastName;
+            DateBorrowed = DateTime.Now;
+            DueDate = DateTime.Now;
         }
 
         public LoanTracking(DateTime dateBorrowed, DateTime dueDate)
@@ -28,6 +30,12 @@
         }
         public LoanTracking()
         {
+            BookId = "";
+            Title = "";
+            Description = "";
+            AuthorLastName = "";
+            DateBorrowed = DateTime.Now;
+            DueDate = DateTime.Now;
         }
     }
 }

@@ -21,7 +21,7 @@ public partial class AddOwnedBook : Form
         else
         {
             txtBookID.Enabled = false;
-            SetOwnedBookFields(book);
+            SetOwnedBookFields(ownedBook);
         }
     }
 
@@ -92,11 +92,13 @@ public partial class AddOwnedBook : Form
         return true;
     }
 
-    private void SetOwnedBookFields(Book book)
+    private void SetOwnedBookFields(OwnedBooks ownedBook)
     {
-        txtBookID.Text = book.BookId;
-        txtTitle.Text = book.Title;
-        txtDescription.Text = book.Description;
-        txtAuthorSName.Text = book.AuthorLastName;
+        txtBookID.Text = ownedBook.BookId;
+        txtTitle.Text = ownedBook.Title;
+        txtDescription.Text = ownedBook.Description;
+        txtAuthorSName.Text = ownedBook.AuthorLastName;
+
+        dtpDateBought.Value = ownedBook.DateBought;
     }
 }

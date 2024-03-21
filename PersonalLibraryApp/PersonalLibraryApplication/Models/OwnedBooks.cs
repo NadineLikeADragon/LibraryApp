@@ -41,6 +41,14 @@
             DateBought = dateBought;
         }
 
-        public OwnedBooks() { }
+        public OwnedBooks() 
+        {
+            BookId = "";
+            Title = "";
+            Description = "";
+            AuthorLastName = "";
+            Owned = false;
+            DateBought = DateTime.Now;
+        }
     }
 }
