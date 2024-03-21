@@ -504,8 +504,8 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
         private void dgvWishlistBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            const int ModifyIndex = 6;
-            const int DeleteIndex = 7;
+            const int ModifyIndex = 5;
+            const int DeleteIndex = 6;
 
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
@@ -520,6 +520,18 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             else if (e.ColumnIndex == DeleteIndex)
             {
                 DeleteBook();
+            }
+        }
+
+        private void rbVADLoans_CheckedChanged(object sender, EventArgs e)
+        {
+            const int ModifyIndex = 7;
+            const int DeleteIndex = 8;
+
+            if (rbVADLoans.Checked)
+            {
+                DisplayReadBooks();
+                btnAddRead.Visible = true;
             }
         }
     }

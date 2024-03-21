@@ -38,10 +38,8 @@
             rbVADRead = new RadioButton();
             rbVADWishlist = new RadioButton();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            label4 = new Label();
-            radioButton4 = new RadioButton();
-            radioButton5 = new RadioButton();
+            rbVADWishListToOwned = new RadioButton();
+            rbVADLoans = new RadioButton();
             btnAddOwned = new Button();
             btnAddRead = new Button();
             btnAddWishlist = new Button();
@@ -51,7 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvWishlistBooks).BeginInit();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOwnedBooks).BeginInit();
             SuspendLayout();
             // 
@@ -61,20 +58,21 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Poor Richard", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(489, 45);
+            label1.Location = new Point(428, 34);
             label1.Name = "label1";
-            label1.Size = new Size(378, 44);
+            label1.Size = new Size(297, 33);
             label1.TabIndex = 0;
             label1.Text = "Personal Library Manager";
             // 
             // dgvReadBooks
             // 
             dgvReadBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReadBooks.Location = new Point(12, 601);
+            dgvReadBooks.Location = new Point(10, 451);
+            dgvReadBooks.Margin = new Padding(3, 2, 3, 2);
             dgvReadBooks.Name = "dgvReadBooks";
             dgvReadBooks.RowHeadersWidth = 51;
             dgvReadBooks.RowTemplate.Height = 24;
-            dgvReadBooks.Size = new Size(1216, 163);
+            dgvReadBooks.Size = new Size(1064, 122);
             dgvReadBooks.TabIndex = 5;
             dgvReadBooks.CellContentClick += dgvReadBooks_CellContentClick;
             dgvReadBooks.VisibleChanged += rbVADRead_CheckedChanged;
@@ -82,30 +80,33 @@
             // panel2
             // 
             panel2.Controls.Add(dataGridView4);
-            panel2.Location = new Point(1249, 859);
+            panel2.Location = new Point(1093, 644);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(215, 165);
+            panel2.Size = new Size(188, 124);
             panel2.TabIndex = 2;
             panel2.Visible = false;
             // 
             // dataGridView4
             // 
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(19, 165);
+            dataGridView4.Location = new Point(17, 124);
+            dataGridView4.Margin = new Padding(3, 2, 3, 2);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowHeadersWidth = 51;
             dataGridView4.RowTemplate.Height = 24;
-            dataGridView4.Size = new Size(196, 145);
+            dataGridView4.Size = new Size(172, 109);
             dataGridView4.TabIndex = 1;
             // 
             // dgvWishlistBooks
             // 
             dgvWishlistBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvWishlistBooks.Location = new Point(12, 782);
+            dgvWishlistBooks.Location = new Point(10, 586);
+            dgvWishlistBooks.Margin = new Padding(3, 2, 3, 2);
             dgvWishlistBooks.Name = "dgvWishlistBooks";
             dgvWishlistBooks.RowHeadersWidth = 51;
             dgvWishlistBooks.RowTemplate.Height = 24;
-            dgvWishlistBooks.Size = new Size(1216, 160);
+            dgvWishlistBooks.Size = new Size(1064, 120);
             dgvWishlistBooks.TabIndex = 1;
             dgvWishlistBooks.CellContentClick += dgvWishlistBooks_CellContentClick;
             // 
@@ -115,9 +116,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Poor Richard", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(-5, 17);
+            label2.Location = new Point(-4, 13);
             label2.Name = "label2";
-            label2.Size = new Size(217, 28);
+            label2.Size = new Size(173, 22);
             label2.TabIndex = 4;
             label2.Text = "Please select an option: ";
             // 
@@ -126,9 +127,10 @@
             rbVADOwned.AutoSize = true;
             rbVADOwned.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
             rbVADOwned.ForeColor = SystemColors.ActiveCaptionText;
-            rbVADOwned.Location = new Point(5, 63);
+            rbVADOwned.Location = new Point(4, 47);
+            rbVADOwned.Margin = new Padding(3, 2, 3, 2);
             rbVADOwned.Name = "rbVADOwned";
-            rbVADOwned.Size = new Size(339, 27);
+            rbVADOwned.Size = new Size(278, 23);
             rbVADOwned.TabIndex = 5;
             rbVADOwned.TabStop = true;
             rbVADOwned.Text = "View, Add, Delete Current Owned Books";
@@ -140,9 +142,10 @@
             rbVADRead.AutoSize = true;
             rbVADRead.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
             rbVADRead.ForeColor = SystemColors.ActiveCaptionText;
-            rbVADRead.Location = new Point(5, 117);
+            rbVADRead.Location = new Point(4, 88);
+            rbVADRead.Margin = new Padding(3, 2, 3, 2);
             rbVADRead.Name = "rbVADRead";
-            rbVADRead.Size = new Size(312, 27);
+            rbVADRead.Size = new Size(254, 23);
             rbVADRead.TabIndex = 6;
             rbVADRead.TabStop = true;
             rbVADRead.Text = "View Add, Delete Books You've Read";
@@ -154,9 +157,10 @@
             rbVADWishlist.AutoSize = true;
             rbVADWishlist.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
             rbVADWishlist.ForeColor = SystemColors.ActiveCaptionText;
-            rbVADWishlist.Location = new Point(5, 177);
+            rbVADWishlist.Location = new Point(4, 133);
+            rbVADWishlist.Margin = new Padding(3, 2, 3, 2);
             rbVADWishlist.Name = "rbVADWishlist";
-            rbVADWishlist.Size = new Size(273, 27);
+            rbVADWishlist.Size = new Size(224, 23);
             rbVADWishlist.TabIndex = 7;
             rbVADWishlist.TabStop = true;
             rbVADWishlist.Text = "ViewAdd, Delete  Wishlist Items";
@@ -167,72 +171,55 @@
             // 
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(rbVADWishListToOwned);
+            groupBox1.Controls.Add(rbVADLoans);
             groupBox1.Controls.Add(rbVADOwned);
             groupBox1.Controls.Add(rbVADRead);
             groupBox1.Controls.Add(rbVADWishlist);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(49, 12);
+            groupBox1.Location = new Point(43, 9);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(395, 238);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(346, 250);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // rbVADWishListToOwned
             // 
-            groupBox2.BackColor = Color.Transparent;
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(radioButton4);
-            groupBox2.Controls.Add(radioButton5);
-            groupBox2.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox2.Location = new Point(927, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(379, 238);
-            groupBox2.TabIndex = 11;
-            groupBox2.TabStop = false;
+            rbVADWishListToOwned.AutoSize = true;
+            rbVADWishListToOwned.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            rbVADWishListToOwned.ForeColor = SystemColors.ActiveCaptionText;
+            rbVADWishListToOwned.Location = new Point(4, 215);
+            rbVADWishListToOwned.Margin = new Padding(3, 2, 3, 2);
+            rbVADWishListToOwned.Name = "rbVADWishListToOwned";
+            rbVADWishListToOwned.Size = new Size(285, 23);
+            rbVADWishListToOwned.TabIndex = 6;
+            rbVADWishListToOwned.TabStop = true;
+            rbVADWishListToOwned.Text = "Switch Books from WishList to Owned List ";
+            rbVADWishListToOwned.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // rbVADLoans
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Poor Richard", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(-5, 17);
-            label4.Name = "label4";
-            label4.Size = new Size(193, 28);
-            label4.TabIndex = 4;
-            label4.Text = "Would You Like to: ";
-            // 
-            // radioButton4
-            // 
-            radioButton4.AutoSize = true;
-            radioButton4.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton4.ForeColor = SystemColors.ActiveCaptionText;
-            radioButton4.Location = new Point(5, 63);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(163, 27);
-            radioButton4.TabIndex = 5;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Track Book Loans";
-            radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            radioButton5.AutoSize = true;
-            radioButton5.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton5.ForeColor = SystemColors.ActiveCaptionText;
-            radioButton5.Location = new Point(5, 117);
-            radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(349, 27);
-            radioButton5.TabIndex = 6;
-            radioButton5.TabStop = true;
-            radioButton5.Text = "Switch Books from WishList to Owned List ";
-            radioButton5.UseVisualStyleBackColor = true;
+            rbVADLoans.AutoSize = true;
+            rbVADLoans.Font = new Font("Poor Richard", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            rbVADLoans.ForeColor = SystemColors.ActiveCaptionText;
+            rbVADLoans.Location = new Point(4, 174);
+            rbVADLoans.Margin = new Padding(3, 2, 3, 2);
+            rbVADLoans.Name = "rbVADLoans";
+            rbVADLoans.Size = new Size(133, 23);
+            rbVADLoans.TabIndex = 5;
+            rbVADLoans.TabStop = true;
+            rbVADLoans.Text = "Track Book Loans";
+            rbVADLoans.UseVisualStyleBackColor = true;
+            rbVADLoans.CheckedChanged += rbVADLoans_CheckedChanged;
             // 
             // btnAddOwned
             // 
-            btnAddOwned.Location = new Point(1249, 455);
+            btnAddOwned.Location = new Point(1093, 341);
+            btnAddOwned.Margin = new Padding(3, 2, 3, 2);
             btnAddOwned.Name = "btnAddOwned";
-            btnAddOwned.Size = new Size(136, 62);
+            btnAddOwned.Size = new Size(119, 46);
             btnAddOwned.TabIndex = 12;
             btnAddOwned.Text = "Add to Owned Books";
             btnAddOwned.UseVisualStyleBackColor = true;
@@ -241,9 +228,10 @@
             // 
             // btnAddRead
             // 
-            btnAddRead.Location = new Point(1249, 577);
+            btnAddRead.Location = new Point(1093, 433);
+            btnAddRead.Margin = new Padding(3, 2, 3, 2);
             btnAddRead.Name = "btnAddRead";
-            btnAddRead.Size = new Size(136, 62);
+            btnAddRead.Size = new Size(119, 46);
             btnAddRead.TabIndex = 13;
             btnAddRead.Text = "Add to Read Books";
             btnAddRead.UseVisualStyleBackColor = true;
@@ -252,9 +240,10 @@
             // 
             // btnAddWishlist
             // 
-            btnAddWishlist.Location = new Point(1249, 678);
+            btnAddWishlist.Location = new Point(1093, 508);
+            btnAddWishlist.Margin = new Padding(3, 2, 3, 2);
             btnAddWishlist.Name = "btnAddWishlist";
-            btnAddWishlist.Size = new Size(136, 62);
+            btnAddWishlist.Size = new Size(119, 46);
             btnAddWishlist.TabIndex = 14;
             btnAddWishlist.Text = "Add to WishList Books";
             btnAddWishlist.UseVisualStyleBackColor = true;
@@ -264,30 +253,31 @@
             // dgvOwnedBooks
             // 
             dgvOwnedBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOwnedBooks.Location = new Point(12, 396);
+            dgvOwnedBooks.Location = new Point(10, 297);
+            dgvOwnedBooks.Margin = new Padding(3, 2, 3, 2);
             dgvOwnedBooks.Name = "dgvOwnedBooks";
             dgvOwnedBooks.RowHeadersWidth = 51;
             dgvOwnedBooks.RowTemplate.Height = 24;
-            dgvOwnedBooks.Size = new Size(1216, 186);
+            dgvOwnedBooks.Size = new Size(1064, 140);
             dgvOwnedBooks.TabIndex = 0;
             dgvOwnedBooks.CellContentClick += dgvOwnedBooks_CellContentClick;
             // 
             // LibraryManager
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(1476, 1055);
+            ClientSize = new Size(1292, 661);
             Controls.Add(dgvWishlistBooks);
             Controls.Add(dgvReadBooks);
             Controls.Add(dgvOwnedBooks);
             Controls.Add(btnAddWishlist);
             Controls.Add(btnAddRead);
             Controls.Add(btnAddOwned);
-            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(panel2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LibraryManager";
             Text = "Form1";
             Load += LibraryManager_Load_1;
@@ -297,8 +287,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvWishlistBooks).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOwnedBooks).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -316,10 +304,8 @@
         private RadioButton rbVADRead;
         private RadioButton rbVADWishlist;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private Label label4;
-        private RadioButton radioButton4;
-        private RadioButton radioButton5;
+        private RadioButton rbVADLoans;
+        private RadioButton rbVADWishListToOwned;
         private Button btnAddOwned;
         private Button btnAddRead;
         private Button btnAddWishlist;
