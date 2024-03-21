@@ -8,11 +8,13 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
         List<OwnedBooks> ownedBooks = new List<OwnedBooks>();
         List<BooksRead> booksRead = new List<BooksRead>();
         List<WishList> wishListItems = new List<WishList>();
+        List<LoanTracking> loanedBooks = new List<LoanTracking>();
         public LibraryManager()
         {
             loadDataToList();
             loadReadDataToList();
             loadWishlistDataToList();
+            loadLoanDataToList();
             InitializeComponent();
         }
 
@@ -46,9 +48,20 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             booksRead.Add(b1);
             booksRead.Add(b2);
         }
-        private OwnedBooks selectedBook;
+        private void loadLoanDataToList()
+        {
+            DateTime date1 = Convert.ToDateTime("7/10/2023");
+            LoanTracking b0 = new LoanTracking("978-0544003415", "The Lord of the Rings", "Frodo does nothing, Sam does", "J.R.R Tolkien", date1, date1);
+            LoanTracking b1 = new LoanTracking("978-0441172719", "Dune", "Son becomes worm king", "Frank Herbert", date1, date1);
+            loanedBooks.Add(b0);
+            loanedBooks.Add(b1);
+        }
+        // create a list of loaned books
+        private Book selectedBook;
+        private OwnedBooks selectedOwnedBook;
         private BooksRead selectedReadBook;
         private WishList selectedWishlistItem;
+        private LoanTracking selectedLoan;
 
         private void DisplayReadBooks()
         {
@@ -171,6 +184,46 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             dgvBooks.Columns["AuthorLastName"].Width = 120;
         }
 
+        private void DisplayLoans()
+        {
+            dgvBooks.Columns.Clear();
+            dgvBooks.DataSource = new BindingList<LoanTracking>(loanedBooks.ToList());
+
+            //Add column for modify button
+
+            var modifyColumn = new DataGridViewButtonColumn()
+            {
+                UseColumnTextForButtonValue = true,
+                HeaderText = "",
+                Text = "Modify"
+            };
+            dgvBooks.Columns.Add(modifyColumn);
+
+            // Add column for delete button
+            var deleteColumn = new DataGridViewButtonColumn()
+            {
+                UseColumnTextForButtonValue = true,
+                HeaderText = "",
+                Text = "Delete"
+            };
+            dgvBooks.Columns.Add(deleteColumn);
+
+            // Format the column headers
+            dgvBooks.EnableHeadersVisualStyles = false;
+            dgvBooks.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            dgvBooks.ColumnHeadersDefaultCellStyle.BackColor = Color.MidnightBlue;
+            dgvBooks.ColumnHeadersDefaultCellStyle.ForeColor = Color.Honeydew;
+
+            // Format the odd-numbered rows
+            dgvBooks.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+
+            // Format the columns
+            dgvBooks.Columns["BookId"].HeaderText = "Book ID";
+            dgvBooks.Columns["Description"].Width = 240;
+            dgvBooks.Columns["AuthorLastName"].HeaderText = "Author";
+            dgvBooks.Columns["AuthorLastName"].Width = 120;
+        }
+
         private void dgvBooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
         }
@@ -185,7 +238,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             }
             return null;
         }
-        private OwnedBooks GetBook(string bookId)
+        private OwnedBooks GetOwnedBook(string bookId)
         {
             foreach (OwnedBooks book in ownedBooks)
             {
@@ -199,6 +252,17 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
         private WishList GetWishListBook(string bookId)
         {
             foreach (WishList book in wishListItems)
+            {
+                if (book.BookId.Equals(bookId))
+                {
+                    return book;
+                }
+            }
+            return null;
+        }
+        private LoanTracking GetLoan(string bookId)
+        {
+            foreach (LoanTracking book in loanedBooks)
             {
                 if (book.BookId.Equals(bookId))
                 {
@@ -268,27 +332,27 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             }
         }
 
-        private void ModifyBook(int indexOfOld)
+        private void ModifyOwnedBook(int indexOfOld)
         {
             var oldBook = new OwnedBooks
             {
-                BookId = selectedBook.BookId,
-                Title = selectedBook.Title,
-                Description = selectedBook.Description,
-                AuthorLastName = selectedBook.AuthorLastName,
-                DateBought = selectedBook.DateBought,
+                BookId = selectedOwnedBook.BookId,
+                Title = selectedOwnedBook.Title,
+                Description = selectedOwnedBook.Description,
+                AuthorLastName = selectedOwnedBook.AuthorLastName,
+                DateBought = selectedOwnedBook.DateBought,
             };
             var addModifyBookForm = new AddModifyBook.AddModifyBook()
             {
                 AddBook = false,
-                Book = selectedBook
+                Book = selectedOwnedBook
             };
             DialogResult result = addModifyBookForm.ShowDialog();
             if (result == DialogResult.OK)
             {
                 try
                 {
-                    ownedBooks[indexOfOld] = selectedBook;
+                    ownedBooks[indexOfOld] = selectedOwnedBook;
                     DisplayOwnedBooks();
                 }
                 catch (Exception ex)
@@ -298,14 +362,14 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             }
         }
 
-        private void DeleteBook()
+        private void DeleteOwnedBook()
         {
-            DialogResult result = MessageBox.Show($"Delete {selectedBook.BookId.Trim()}?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Delete {selectedOwnedBook.BookId.Trim()}?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 try
                 {
-                    if (ownedBooks.Remove(selectedBook))
+                    if (ownedBooks.Remove(selectedOwnedBook))
                     {
                         DisplayReadBooks();
                     }
@@ -377,8 +441,8 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             {
                 try
                 {
-                    selectedBook = addModifyBookForm.Book;
-                    ownedBooks.Add(selectedBook);
+                    selectedOwnedBook = addModifyBookForm.Book;
+                    ownedBooks.Add(selectedOwnedBook);
                     DisplayOwnedBooks();
                 }
                 catch (Exception ex)
@@ -396,6 +460,53 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddOwned.Enabled = true;
                 btnAddRead.Enabled = false;
                 btnAddWishlist.Enabled = false;
+                btnAddLoan.Enabled = false;
+            }
+        }
+
+        private void dgvBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ModifyIndex, DeleteIndex;
+
+            if (rbVADOwned.Checked) // indices for the owned books DGV
+            {
+                ModifyIndex = 6;
+                DeleteIndex = 7;
+            }
+            else if (rbVADRead.Checked) // indices for the read books DGV
+            {
+                ModifyIndex = 7;
+                DeleteIndex = 8;
+            }
+            else if (rbVADWishlist.Checked) // indices for the wishlist DGV
+            {
+                ModifyIndex = 5;
+                DeleteIndex = 6;
+            }
+            else if (rbVADLoans.Checked) // indices for the loaned books DGV
+            {
+                ModifyIndex = 7;
+                DeleteIndex = 8;
+            }
+            else // TODO: one more case required to handle the migration of wishlist items to the owned books list
+            {
+                ModifyIndex = 0;
+                DeleteIndex = 0;
+            }
+
+            if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
+            {
+                string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
+                selectedBook = GetOwnedBook(bookId);
+            }
+
+            if (e.ColumnIndex == ModifyIndex)
+            {
+                ModifyOwnedBook(e.RowIndex);
+            }
+            else if (e.ColumnIndex == DeleteIndex)
+            {
+                DeleteOwnedBook();
             }
         }
 
@@ -407,16 +518,16 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
             {
                 string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
-                selectedBook = GetBook(bookId);
+                selectedOwnedBook = GetOwnedBook(bookId);
             }
 
             if (e.ColumnIndex == ModifyIndex)
             {
-                ModifyBook(e.RowIndex);
+                ModifyOwnedBook(e.RowIndex);
             }
             else if (e.ColumnIndex == DeleteIndex)
             {
-                DeleteBook();
+                DeleteOwnedBook();
             }
         }
 
@@ -449,6 +560,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddOwned.Enabled = false;
                 btnAddRead.Enabled = true;
                 btnAddWishlist.Enabled = false;
+                btnAddLoan.Enabled = false;
             }
         }
 
@@ -483,6 +595,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddOwned.Enabled = false;
                 btnAddRead.Enabled = false;
                 btnAddWishlist.Enabled = true;
+                btnAddLoan.Enabled = false;
             }
         }
 
@@ -521,23 +634,47 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
             if (e.ColumnIndex == ModifyIndex)
             {
-                ModifyBook(e.RowIndex);
+                ModifyOwnedBook(e.RowIndex);
             }
             else if (e.ColumnIndex == DeleteIndex)
             {
-                DeleteBook();
+                DeleteOwnedBook();
             }
         }
 
         private void rbVADLoans_CheckedChanged(object sender, EventArgs e)
         {
-            const int ModifyIndex = 7;
-            const int DeleteIndex = 8;
 
             if (rbVADLoans.Checked)
             {
-                DisplayReadBooks();
-                btnAddRead.Visible = true;
+                DisplayLoans();
+                btnAddRead.Enabled = false;
+                btnAddOwned.Enabled = false;
+                btnAddWishlist.Enabled = false;
+                btnAddLoan.Enabled = true;
+            }
+        }
+
+        private void btnAddLoan_Click(object sender, EventArgs e)
+        {
+            var addModifyLoanForm = new AddLoan.AddLoan()
+            {
+                IsAdd = true
+            };
+
+            DialogResult result = addModifyLoanForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    selectedLoan = addModifyLoanForm.loan;
+                    loanedBooks.Add(selectedLoan);
+                    DisplayLoans();
+                }
+                catch (Exception ex)
+                {
+                    HandleError(ex);
+                }
             }
         }
     }
