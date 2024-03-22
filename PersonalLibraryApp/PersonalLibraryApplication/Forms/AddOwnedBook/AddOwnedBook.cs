@@ -43,6 +43,7 @@ public partial class AddOwnedBook : Form
         {
             this.book = new Book(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text);
             ownedBook = new OwnedBooks(book, true, dtpDateBought.Value);
+            this.DialogResult = DialogResult.OK;
             this.Hide();
         }
     }

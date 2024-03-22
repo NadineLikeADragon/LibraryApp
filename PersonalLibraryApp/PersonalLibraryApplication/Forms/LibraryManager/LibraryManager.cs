@@ -346,7 +346,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             {
                 try
                 {
-                    ownedBooks[indexOfOld] = selectedOwnedBook;
+                    ownedBooks[indexOfOld] = addOwnedBookForm.GetOwnedBook();
                     DisplayOwnedBooks();
                 }
                 catch (Exception ex)
@@ -500,6 +500,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             {
                 string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
                 selectedOwnedBook = GetOwnedBook(bookId);
+                DisplayOwnedBooks();
             }
 
             if (e.ColumnIndex == ModifyIndex)
