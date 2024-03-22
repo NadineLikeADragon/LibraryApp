@@ -500,16 +500,18 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             {
                 string bookId = dgvBooks.Rows[e.RowIndex].Cells[2].Value.ToString().Trim();
                 selectedOwnedBook = GetOwnedBook(bookId);
-                DisplayOwnedBooks();
             }
 
             if (e.ColumnIndex == ModifyIndex)
             {
                 ModifyOwnedBook(e.RowIndex);
+                DisplayOwnedBooks();
             }
             else if (e.ColumnIndex == DeleteIndex)
             {
                 DeleteOwnedBook();
+                DisplayOwnedBooks();
+
             }
         }
 
@@ -524,10 +526,12 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             if (e.ColumnIndex == ModifyIndex)
             {
                 ModifyReadBook(e.RowIndex);
+                DisplayReadBooks();
             }
             else if (e.ColumnIndex == DeleteIndex)
             {
                 DeleteReadBook();
+                DisplayReadBooks();
             }
         }
 
