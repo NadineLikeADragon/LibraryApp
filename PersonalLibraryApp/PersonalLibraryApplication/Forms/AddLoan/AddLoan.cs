@@ -4,7 +4,7 @@ namespace PersonalLibraryApplication.Forms.AddLoan;
 
 public partial class AddLoan : Form
 {
-    internal LoanTracking loan = new LoanTracking();
+    internal LoanTracking loan;
     public bool IsAdd { get; set; }
     public AddLoan()
     {
@@ -29,9 +29,15 @@ public partial class AddLoan : Form
         if (ValidateForm())
         {
             loan = new LoanTracking(txtBookID.Text, txtTitle.Text, txtDescription.Text, txtAuthorSName.Text, dtpDateBorrowed.Value, dtpDueDate.Value);
+            this.DialogResult = DialogResult.OK;
 
             this.Hide();
         }
+    }
+
+    internal LoanTracking GetLoan()
+    {
+        return loan;
     }
 
     private void button2_Click(object sender, EventArgs e)
@@ -82,5 +88,10 @@ public partial class AddLoan : Form
         txtAuthorSName.Text = loan.AuthorLastName;
         dtpDateBorrowed.Value = loan.DateBorrowed;
         dtpDueDate.Value = loan.DueDate;
+    }
+
+    private void AddLoan_Load_1(object sender, EventArgs e)
+    {
+
     }
 }
