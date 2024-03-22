@@ -98,9 +98,9 @@ partial class AddBookRead
         label3.Location = new Point(9, 89);
         label3.Margin = new Padding(4, 0, 4, 0);
         label3.Name = "label3";
-        label3.Size = new Size(119, 20);
+        label3.Size = new Size(57, 20);
         label3.TabIndex = 4;
-        label3.Text = "Author Surname:";
+        label3.Text = "Author:";
         // 
         // txtBookID
         // 

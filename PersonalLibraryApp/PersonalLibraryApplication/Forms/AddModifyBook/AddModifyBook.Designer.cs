@@ -28,157 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDatePicked = new System.Windows.Forms.TextBox();
-            this.lbdate = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.txtBookId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rtxtDescription = new System.Windows.Forms.RichTextBox();
-            this.btnAddBook = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            txtDatePicked = new TextBox();
+            lbdate = new Label();
+            txtSurname = new TextBox();
+            txtTitle = new TextBox();
+            txtBookId = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label4 = new Label();
+            rtxtDescription = new RichTextBox();
+            btnAddBook = new Button();
+            btnCancel = new Button();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtDatePicked);
-            this.groupBox1.Controls.Add(this.lbdate);
-            this.groupBox1.Controls.Add(this.txtSurname);
-            this.groupBox1.Controls.Add(this.txtTitle);
-            this.groupBox1.Controls.Add(this.txtBookId);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(71, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 198);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            groupBox1.Controls.Add(txtDatePicked);
+            groupBox1.Controls.Add(lbdate);
+            groupBox1.Controls.Add(txtSurname);
+            groupBox1.Controls.Add(txtTitle);
+            groupBox1.Controls.Add(txtBookId);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(95, 5);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(315, 305);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
             // 
             // txtDatePicked
             // 
-            this.txtDatePicked.Location = new System.Drawing.Point(109, 162);
-            this.txtDatePicked.Name = "txtDatePicked";
-            this.txtDatePicked.Size = new System.Drawing.Size(100, 20);
-            this.txtDatePicked.TabIndex = 7;
+            txtDatePicked.Location = new Point(145, 249);
+            txtDatePicked.Margin = new Padding(4, 5, 4, 5);
+            txtDatePicked.Name = "txtDatePicked";
+            txtDatePicked.Size = new Size(132, 27);
+            txtDatePicked.TabIndex = 7;
             // 
             // lbdate
             // 
-            this.lbdate.AutoSize = true;
-            this.lbdate.Location = new System.Drawing.Point(19, 165);
-            this.lbdate.Name = "lbdate";
-            this.lbdate.Size = new System.Drawing.Size(67, 13);
-            this.lbdate.TabIndex = 6;
-            this.lbdate.Text = "Date Bought";
+            lbdate.AutoSize = true;
+            lbdate.Location = new Point(25, 254);
+            lbdate.Margin = new Padding(4, 0, 4, 0);
+            lbdate.Name = "lbdate";
+            lbdate.Size = new Size(93, 20);
+            lbdate.TabIndex = 6;
+            lbdate.Text = "Date Bought";
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(109, 120);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 20);
-            this.txtSurname.TabIndex = 5;
+            txtSurname.Location = new Point(145, 185);
+            txtSurname.Margin = new Padding(4, 5, 4, 5);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(132, 27);
+            txtSurname.TabIndex = 5;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(109, 70);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(100, 20);
-            this.txtTitle.TabIndex = 4;
+            txtTitle.Location = new Point(145, 108);
+            txtTitle.Margin = new Padding(4, 5, 4, 5);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(132, 27);
+            txtTitle.TabIndex = 4;
             // 
             // txtBookId
             // 
-            this.txtBookId.Location = new System.Drawing.Point(109, 29);
-            this.txtBookId.Name = "txtBookId";
-            this.txtBookId.Size = new System.Drawing.Size(100, 20);
-            this.txtBookId.TabIndex = 3;
+            txtBookId.Location = new Point(145, 45);
+            txtBookId.Margin = new Padding(4, 5, 4, 5);
+            txtBookId.Name = "txtBookId";
+            txtBookId.Size = new Size(132, 27);
+            txtBookId.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Authors Surname";
+            label3.AutoSize = true;
+            label3.Location = new Point(21, 195);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Author:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Title";
+            label2.AutoSize = true;
+            label2.Location = new Point(21, 118);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(41, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Title:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BookId";
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 45);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 20);
+            label1.TabIndex = 0;
+            label1.Text = "ISBN:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Book Description";
+            label4.AutoSize = true;
+            label4.Location = new Point(91, 314);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(123, 20);
+            label4.TabIndex = 1;
+            label4.Text = "Book Description";
             // 
             // rtxtDescription
             // 
-            this.rtxtDescription.Location = new System.Drawing.Point(71, 229);
-            this.rtxtDescription.Name = "rtxtDescription";
-            this.rtxtDescription.Size = new System.Drawing.Size(236, 78);
-            this.rtxtDescription.TabIndex = 2;
-            this.rtxtDescription.Text = "";
+            rtxtDescription.Location = new Point(95, 352);
+            rtxtDescription.Margin = new Padding(4, 5, 4, 5);
+            rtxtDescription.Name = "rtxtDescription";
+            rtxtDescription.Size = new Size(313, 118);
+            rtxtDescription.TabIndex = 2;
+            rtxtDescription.Text = "";
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(71, 340);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(75, 23);
-            this.btnAddBook.TabIndex = 3;
-            this.btnAddBook.Text = "Add Book";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click_1);
+            btnAddBook.Location = new Point(95, 523);
+            btnAddBook.Margin = new Padding(4, 5, 4, 5);
+            btnAddBook.Name = "btnAddBook";
+            btnAddBook.Size = new Size(100, 35);
+            btnAddBook.TabIndex = 3;
+            btnAddBook.Text = "Add Book";
+            btnAddBook.UseVisualStyleBackColor = true;
+            btnAddBook.Click += btnAddBook_Click_1;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(232, 340);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Location = new Point(309, 523);
+            btnCancel.Margin = new Padding(4, 5, 4, 5);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(100, 35);
+            btnCancel.TabIndex = 4;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // AddModifyBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(380, 386);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAddBook);
-            this.Controls.Add(this.rtxtDescription);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "AddModifyBook";
-            this.Text = "V";
-            this.Load += new System.EventHandler(this.AddModifyBook_Load_1);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
+            ClientSize = new Size(507, 594);
+            Controls.Add(btnCancel);
+            Controls.Add(btnAddBook);
+            Controls.Add(rtxtDescription);
+            Controls.Add(label4);
+            Controls.Add(groupBox1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "AddModifyBook";
+            Text = "V";
+            Load += AddModifyBook_Load_1;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

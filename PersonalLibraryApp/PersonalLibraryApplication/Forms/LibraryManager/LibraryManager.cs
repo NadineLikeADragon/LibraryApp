@@ -335,7 +335,6 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
         private void ModifyOwnedBook(int indexOfOld)
         {
-            var oldBook = new OwnedBooks(selectedOwnedBook.BookId, selectedOwnedBook.Title, selectedOwnedBook.Description, selectedOwnedBook.AuthorLastName, selectedOwnedBook.DateBought);
             var addOwnedBookForm = new AddOwnedBook.AddOwnedBook
             {
                 IsAdd = false,
@@ -348,6 +347,29 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 {
                     ownedBooks[indexOfOld] = addOwnedBookForm.GetOwnedBook();
                     DisplayOwnedBooks();
+                }
+                catch (Exception ex)
+                {
+                    HandleError(ex);
+                }
+            }
+        }
+
+        private void ModifyLoanBook(int indexOfOld)
+        {
+            var oldBook = new LoanTracking(selectedLoan.BookId, selectedLoan.Title, selectedLoan.Description, selectedLoan.AuthorLastName, selectedLoan.DateBorrowed, selectedLoan.DueDate);
+            var addModifyLoanForm = new AddLoan.AddLoan
+            {
+                IsAdd = false,
+                loan = selectedLoan,
+            };
+            DialogResult result = addModifyLoanForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    loanedBooks[indexOfOld] = addModifyLoanForm.loan;
+                    DisplayLoans();
                 }
                 catch (Exception ex)
                 {
@@ -404,6 +426,25 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                     if (wishListItems.Remove(selectedWishlistItem))
                     {
                         DisplayWishListBooks();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    HandleError(ex);
+                }
+            }
+        }
+
+        private void DeleteLoanedBook()
+        {
+            DialogResult result = MessageBox.Show($"Delete {selectedLoan.BookId.Trim()}?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    if (loanedBooks.Remove(selectedLoan))
+                    {
+                        DisplayLoans();
                     }
                 }
                 catch (Exception ex)
@@ -487,8 +528,8 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
             }
             else if (rbVADLoans.Checked) // indices for the loaned books DGV
             {
-                ModifyIndex = 7;
-                DeleteIndex = 8;
+                ModifyIndex = 6;
+                DeleteIndex = 7;
 
                 ModifyDeleteLoanBook(e, ModifyIndex, DeleteIndex);
             }
@@ -563,11 +604,11 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
             if (e.ColumnIndex == ModifyIndex)
             {
-                ModifyOwnedBook(e.RowIndex);
+                ModifyLoanBook(e.RowIndex);
             }
             else if (e.ColumnIndex == DeleteIndex)
             {
-                DeleteOwnedBook();
+                DeleteLoanedBook();
             }
         }
 
