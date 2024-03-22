@@ -33,6 +33,11 @@
         }
         public WishList()
         {
+            BookId = "";
+            Title = "";
+            Description = "";
+            AuthorLastName = "";
+            Price = 0;
         }
 
         

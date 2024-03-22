@@ -40,6 +40,7 @@
             btnAddRead = new Button();
             btnAddWishlist = new Button();
             dgvBooks = new DataGridView();
+            btnAddLoan = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooks).BeginInit();
             SuspendLayout();
@@ -206,7 +207,19 @@
             dgvBooks.RowTemplate.Height = 24;
             dgvBooks.Size = new Size(1109, 140);
             dgvBooks.TabIndex = 0;
-            dgvBooks.CellContentClick += dgvOwnedBooks_CellContentClick;
+            dgvBooks.CellContentClick += dgvBooks_CellContentClick;
+            // 
+            // btnAddLoan
+            // 
+            btnAddLoan.Enabled = false;
+            btnAddLoan.Location = new Point(826, 213);
+            btnAddLoan.Margin = new Padding(3, 2, 3, 2);
+            btnAddLoan.Name = "btnAddLoan";
+            btnAddLoan.Size = new Size(119, 46);
+            btnAddLoan.TabIndex = 15;
+            btnAddLoan.Text = "Add Loaned Book";
+            btnAddLoan.UseVisualStyleBackColor = true;
+            btnAddLoan.Click += btnAddLoan_Click;
             // 
             // LibraryManager
             // 
@@ -214,6 +227,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1131, 442);
+            Controls.Add(btnAddLoan);
             Controls.Add(dgvBooks);
             Controls.Add(btnAddWishlist);
             Controls.Add(btnAddRead);
@@ -245,6 +259,7 @@
         private Button btnAddRead;
         private Button btnAddWishlist;
         private DataGridView dgvBooks;
+        private Button btnAddLoan;
     }
 }
 

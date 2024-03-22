@@ -15,7 +15,12 @@
             AuthorLastName = authorLastName;
         }
 
-        public Book() { }
-
+        public Book()
+        {
+            BookId = "";
+            Title = "";
+            Description = "";
+            AuthorLastName = "";
+        }
     }
 }

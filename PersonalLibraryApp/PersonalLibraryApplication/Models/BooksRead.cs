@@ -28,6 +28,12 @@
 
         public BooksRead()
         {
+            BookId = "";
+            Title = "";
+            Description = "";
+            AuthorLastName = "";
+            Owned = false;
+            DateFinished = DateTime.Now;
         }
     }
 }
