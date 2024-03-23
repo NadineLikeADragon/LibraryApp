@@ -1,6 +1,4 @@
 ﻿using PersonalLibraryApplication.Models;
-
-
 namespace PersonalLibraryApplication.Forms.AddWishList
 {
     public partial class AddWishList : Form
