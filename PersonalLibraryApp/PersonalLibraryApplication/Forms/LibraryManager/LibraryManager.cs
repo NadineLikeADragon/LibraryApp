@@ -802,7 +802,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 var selectedRow = dgvBooks.SelectedRows[0];
                 var selectedBook = selectedRow.DataBoundItem as WishList;
                 if (selectedBook != null)
-                { 
+                {
                     DateTime date = DateTime.Now;
                     OwnedBooks ownedBook = new OwnedBooks(selectedBook.BookId, selectedBook.Title, selectedBook.Description, selectedBook.AuthorLastName, date);
 
@@ -812,6 +812,71 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
                     DisplayOwnedBooks();
                 }
+            }
+        }
+
+        private void btnPrintToFile_Click(object sender, EventArgs e)
+        {
+            if (ownedBooks != null|| booksRead != null || wishListItems !=null || loanedBooks !=null)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                saveFileDialog.Title = "Save Owned Books File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    try
+                    {
+                        using (StreamWriter writer = new StreamWriter(filePath))
+                        {
+                            foreach (OwnedBooks book in ownedBooks)
+                            {
+                                writer.WriteLine("Book ID: " + book.BookId);
+                                writer.WriteLine("Title: " + book.Title);
+                                writer.WriteLine("Description: " + book.Description);
+                                writer.WriteLine("Author: " + book.AuthorLastName);
+                                writer.WriteLine("Date Acquired: " + book.DateBought.ToShortDateString() + "\n\n\n");
+                            }
+                            foreach (BooksRead book in booksRead)
+                            {
+                                writer.WriteLine("Book ID: " + book.BookId);
+                                writer.WriteLine("Title: " + book.Title);
+                                writer.WriteLine("Description: " + book.Description);
+                                writer.WriteLine("Author: " + book.AuthorLastName);
+                                writer.WriteLine("Date Finished: " + book.DateFinished);
+                                writer.WriteLine("Review{ "+ book.Review + "\n\n\n");
+                            }
+                            foreach(WishList book in wishListItems)
+                            {
+                                writer.WriteLine("Book ID: " + book.BookId);
+                                writer.WriteLine("Title: " + book.Title);
+                                writer.WriteLine("Description: " + book.Description);
+                                writer.WriteLine("Author: " + book.AuthorLastName);
+                                writer.WriteLine("Price: " + book.Price + "\n\n\n");
+                            }
+                            foreach(LoanTracking book in loanedBooks)
+                            {
+                                writer.WriteLine("Book ID: " + book.BookId);
+                                writer.WriteLine("Title: " + book.Title);
+                                writer.WriteLine("Description: " + book.Description);
+                                writer.WriteLine("Author: " + book.AuthorLastName);
+                                writer.WriteLine("Date Borrowed: " + book.DateBorrowed);
+                                writer.WriteLine("Return Date: " + book.DueDate + "\n\n\n");
+                            }
+                        }
+
+                        MessageBox.Show("Personal Library saved to file successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while saving your Personal Library: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Library data available to save.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

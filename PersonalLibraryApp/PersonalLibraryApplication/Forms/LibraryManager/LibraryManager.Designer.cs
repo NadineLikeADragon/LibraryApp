@@ -42,6 +42,7 @@
             dgvBooks = new DataGridView();
             btnAddLoan = new Button();
             btnSwaptoOwned = new Button();
+            btnPrintToFile = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooks).BeginInit();
             SuspendLayout();
@@ -159,7 +160,7 @@
             // btnAddOwned
             // 
             btnAddOwned.Enabled = false;
-            btnAddOwned.Location = new Point(465, 284);
+            btnAddOwned.Location = new Point(450, 284);
             btnAddOwned.Name = "btnAddOwned";
             btnAddOwned.Size = new Size(136, 61);
             btnAddOwned.TabIndex = 12;
@@ -170,7 +171,7 @@
             // btnAddRead
             // 
             btnAddRead.Enabled = false;
-            btnAddRead.Location = new Point(625, 284);
+            btnAddRead.Location = new Point(602, 284);
             btnAddRead.Name = "btnAddRead";
             btnAddRead.Size = new Size(136, 61);
             btnAddRead.TabIndex = 13;
@@ -181,7 +182,7 @@
             // btnAddWishlist
             // 
             btnAddWishlist.Enabled = false;
-            btnAddWishlist.Location = new Point(787, 284);
+            btnAddWishlist.Location = new Point(754, 283);
             btnAddWishlist.Name = "btnAddWishlist";
             btnAddWishlist.Size = new Size(136, 61);
             btnAddWishlist.TabIndex = 14;
@@ -203,7 +204,7 @@
             // btnAddLoan
             // 
             btnAddLoan.Enabled = false;
-            btnAddLoan.Location = new Point(944, 284);
+            btnAddLoan.Location = new Point(908, 284);
             btnAddLoan.Name = "btnAddLoan";
             btnAddLoan.Size = new Size(136, 61);
             btnAddLoan.TabIndex = 15;
@@ -214,7 +215,7 @@
             // btnSwaptoOwned
             // 
             btnSwaptoOwned.Enabled = false;
-            btnSwaptoOwned.Location = new Point(1097, 284);
+            btnSwaptoOwned.Location = new Point(1065, 284);
             btnSwaptoOwned.Name = "btnSwaptoOwned";
             btnSwaptoOwned.Size = new Size(150, 61);
             btnSwaptoOwned.TabIndex = 16;
@@ -222,12 +223,23 @@
             btnSwaptoOwned.UseVisualStyleBackColor = true;
             btnSwaptoOwned.Click += btnSwaptoOwned_Click;
             // 
+            // btnPrintToFile
+            // 
+            btnPrintToFile.Location = new Point(1114, 605);
+            btnPrintToFile.Name = "btnPrintToFile";
+            btnPrintToFile.Size = new Size(136, 61);
+            btnPrintToFile.TabIndex = 17;
+            btnPrintToFile.Text = "Print to File";
+            btnPrintToFile.UseVisualStyleBackColor = true;
+            btnPrintToFile.Click += btnPrintToFile_Click;
+            // 
             // LibraryManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(1293, 589);
+            ClientSize = new Size(1308, 667);
+            Controls.Add(btnPrintToFile);
             Controls.Add(btnSwaptoOwned);
             Controls.Add(btnAddLoan);
             Controls.Add(dgvBooks);
@@ -262,6 +274,7 @@
         private DataGridView dgvBooks;
         private Button btnAddLoan;
         private Button btnSwaptoOwned;
+        private Button btnPrintToFile;
     }
 }
 
