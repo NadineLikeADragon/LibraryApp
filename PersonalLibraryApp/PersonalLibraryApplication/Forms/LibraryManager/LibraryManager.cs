@@ -52,8 +52,9 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
         private void loadLoanDataToList()
         {
             DateTime date1 = Convert.ToDateTime("7/10/2023");
-            LoanTracking b0 = new LoanTracking("978-0544003415", "The Lord of the Rings", "Frodo does nothing, Sam does", "J.R.R Tolkien", date1, date1);
-            LoanTracking b1 = new LoanTracking("978-0441172719", "Dune", "Son becomes worm king", "Frank Herbert", date1, date1);
+            DateTime date2 = Convert.ToDateTime("7/12/2023");
+            LoanTracking b0 = new LoanTracking("B00HWN7NX0", "The Witcher: The Last Wish", "Geralt definitely kills only villians", "Andrzej Sapkowski", date1, date2);
+            LoanTracking b1 = new LoanTracking("978-1368071062", "The Bob's Burgers Burger Book ", "Real Recipes for Joke Burgers", "Bouchard", date1, date2);
             loanedBooks.Add(b0);
             loanedBooks.Add(b1);
         }
@@ -698,6 +699,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddRead.Enabled = false;
                 btnAddWishlist.Enabled = true;
                 btnAddLoan.Enabled = false;
+                btnSwaptoOwned.Enabled = true;
             }
         }
 
@@ -776,6 +778,39 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 catch (Exception ex)
                 {
                     HandleError(ex);
+                }
+            }
+        }
+
+        private void rbVADWishListToOwned_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbVADWishListToOwned.Checked)
+            {
+                DisplayWishListBooks();
+                btnAddRead.Enabled = false;
+                btnAddOwned.Enabled = false;
+                btnAddWishlist.Enabled = false;
+                btnAddLoan.Enabled = false;
+                btnSwaptoOwned.Enabled = true;
+            }
+        }
+
+        private void btnSwaptoOwned_Click(object sender, EventArgs e)
+        {
+            if (dgvBooks.SelectedRows.Count > 0)
+            {
+                var selectedRow = dgvBooks.SelectedRows[0];
+                var selectedBook = selectedRow.DataBoundItem as WishList;
+                if (selectedBook != null)
+                { 
+                    DateTime date = DateTime.Now;
+                    OwnedBooks ownedBook = new OwnedBooks(selectedBook.BookId, selectedBook.Title, selectedBook.Description, selectedBook.AuthorLastName, date);
+
+                    wishListItems.Remove(selectedBook);
+
+                    ownedBooks.Add(ownedBook);
+
+                    DisplayOwnedBooks();
                 }
             }
         }

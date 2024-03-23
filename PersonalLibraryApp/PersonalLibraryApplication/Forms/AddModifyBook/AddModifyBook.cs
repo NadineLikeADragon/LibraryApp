@@ -52,7 +52,6 @@ namespace PersonalLibraryApplication.Forms.AddModifyBook
             {
                 if (AddBook)
                 {
-                    // Initialize the Book property with a new Book object
                     this.Book = new OwnedBooks();
                 }
                 LoadBookData();
