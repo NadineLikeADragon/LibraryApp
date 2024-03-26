@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 LibraryApp-main/PersonalLibraryApp/.idea/
+/PersonalLibraryApp/PersonalLibraryApplication/obj
+PersonalLibraryApp/PersonalLibraryApplication/PersonalLibraryApplication.csproj.user
