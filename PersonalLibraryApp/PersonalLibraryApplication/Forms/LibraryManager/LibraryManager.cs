@@ -497,6 +497,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddRead.Enabled = false;
                 btnAddWishlist.Enabled = false;
                 btnAddLoan.Enabled = false;
+                btnSwaptoOwned.Enabled = false;
             }
         }
 
@@ -664,6 +665,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddRead.Enabled = true;
                 btnAddWishlist.Enabled = false;
                 btnAddLoan.Enabled = false;
+                btnSwaptoOwned.Enabled = false;
             }
         }
 
@@ -700,6 +702,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddWishlist.Enabled = true;
                 btnAddLoan.Enabled = false;
                 btnSwaptoOwned.Enabled = true;
+                btnSwaptoOwned.Enabled = false;
             }
         }
 
@@ -756,6 +759,7 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                 btnAddOwned.Enabled = false;
                 btnAddWishlist.Enabled = false;
                 btnAddLoan.Enabled = true;
+                btnSwaptoOwned.Enabled = false;
             }
         }
 
@@ -817,27 +821,35 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
 
         private void btnPrintToFile_Click(object sender, EventArgs e)
         {
-            if (ownedBooks != null|| booksRead != null || wishListItems !=null || loanedBooks !=null)
-            {
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-                saveFileDialog.Title = "Save Owned Books File";
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string filePath = saveFileDialog.FileName;
 
-                    try
+            ownedBooks = null;
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog.Title = "Save Owned Books File";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+
+                try
+                {
+                    using (StreamWriter writer = new StreamWriter(filePath))
                     {
-                        using (StreamWriter writer = new StreamWriter(filePath))
+                        if (ownedBooks != null)
                         {
+                            writer.WriteLine("Owned Books\n");
                             foreach (OwnedBooks book in ownedBooks)
                             {
                                 writer.WriteLine("Book ID: " + book.BookId);
                                 writer.WriteLine("Title: " + book.Title);
                                 writer.WriteLine("Description: " + book.Description);
                                 writer.WriteLine("Author: " + book.AuthorLastName);
-                                writer.WriteLine("Date Acquired: " + book.DateBought.ToShortDateString() + "\n\n\n");
+                                writer.WriteLine("Date Acquired: " + book.DateBought.ToShortDateString() + "\n\n");
                             }
+                            writer.WriteLine("--------------------\n");
+                        }
+                        if (booksRead != null)
+                        {
+                            writer.WriteLine("Books Read\n");
                             foreach (BooksRead book in booksRead)
                             {
                                 writer.WriteLine("Book ID: " + book.BookId);
@@ -845,9 +857,14 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                                 writer.WriteLine("Description: " + book.Description);
                                 writer.WriteLine("Author: " + book.AuthorLastName);
                                 writer.WriteLine("Date Finished: " + book.DateFinished);
-                                writer.WriteLine("Review{ "+ book.Review + "\n\n\n");
+                                writer.WriteLine("Review{ " + book.Review + "\n\n\n");
                             }
-                            foreach(WishList book in wishListItems)
+                            writer.WriteLine("--------------------\n");
+                        }
+                        if (wishListItems != null)
+                        {
+                            writer.WriteLine("Wish List\n");
+                            foreach (WishList book in wishListItems)
                             {
                                 writer.WriteLine("Book ID: " + book.BookId);
                                 writer.WriteLine("Title: " + book.Title);
@@ -855,28 +872,30 @@ namespace PersonalLibraryApplication.Forms.LibraryManager
                                 writer.WriteLine("Author: " + book.AuthorLastName);
                                 writer.WriteLine("Price: " + book.Price + "\n\n\n");
                             }
-                            foreach(LoanTracking book in loanedBooks)
+                            writer.WriteLine("--------------------\n");
+                        }
+                        if (loanedBooks != null)
+                        {
+                            writer.WriteLine("Loaned Books\n");
+                            foreach (LoanTracking book in loanedBooks)
                             {
                                 writer.WriteLine("Book ID: " + book.BookId);
                                 writer.WriteLine("Title: " + book.Title);
                                 writer.WriteLine("Description: " + book.Description);
                                 writer.WriteLine("Author: " + book.AuthorLastName);
                                 writer.WriteLine("Date Borrowed: " + book.DateBorrowed);
-                                writer.WriteLine("Return Date: " + book.DueDate + "\n\n\n");
+                                writer.WriteLine("Due Date: " + book.DueDate + "\n\n\n");
                             }
+                            writer.WriteLine("--------------------\n");
                         }
+                    }
 
-                        MessageBox.Show("Personal Library saved to file successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("An error occurred while saving your Personal Library: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Personal Library saved to file successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            else
-            {
-                MessageBox.Show("No Library data available to save.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while saving your Personal Library: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
